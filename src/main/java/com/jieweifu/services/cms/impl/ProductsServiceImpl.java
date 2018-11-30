@@ -58,6 +58,14 @@ public class ProductsServiceImpl implements ProductsService {
     }
 
     @Override
+    public List<Products> getAllProducts() {
+        return db.select()
+                .from(Products.class)
+                .where("deleted = 0")
+                .queryForList(Products.class);
+    }
+
+    @Override
     public List<Products> listProducts(int pageIndex, int pageSize) {
         return db.select()
                 .from(Products.class)

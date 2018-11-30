@@ -36,6 +36,12 @@ public interface ProductsService {
     Products getProducts(Integer id);
 
     /**
+     * 取
+     * @return
+     */
+    List<Products> getAllProducts();
+
+    /**
      * 分页
      * @param pageIndex
      * @param pageSize

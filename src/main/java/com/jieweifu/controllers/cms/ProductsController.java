@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
+import javax.validation.Valid;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -32,25 +33,22 @@ public class ProductsController {
         this.productsService = productsService;
     }
 
-    @PostMapping("saveProducts")
-    public Result saveProducts(@RequestParam(value = "name") String name,
-                               @RequestParam(value = "childTypeId") Integer id,
-                               @RequestParam(value = "content", required = false) String content,
-                               @RequestParam(value = "file", required = false) MultipartFile file) {
-        Products products = new Products();
-        if (file != null) {
+    @PostMapping("imgUpload")
+    public Result imgUpload(@RequestParam(value = "img") MultipartFile img) {
+        String url = null;
+        if (img != null) {
             try {
-                products.setImgUrl(FileUtil.uploadImage(file, uploadPath));
+                url = FileUtil.uploadImage(img, uploadPath);
             } catch (Exception e) {
                 e.printStackTrace();
                 return new Result().setError("上传失败，请刷新再试");
             }
         }
-        products.setName(name);
-        products.setChildTypeId(id);
-        if (StringUtils.isNotBlank(content)) {
-            products.setContent(content);
-        }
+        return new Result().setData(url);
+    }
+
+    @PostMapping("saveProducts")
+    public Result saveProducts(@RequestBody Products products) {
         try {
             productsService.saveProducts(products);
         } catch (Exception e) {
@@ -112,6 +110,17 @@ public class ProductsController {
             return new Result().setError("系统繁忙，请稍后再试");
         }
         return new Result().setData(products);
+    }
+
+    @GetMapping("getAllProducts")
+    public Result getAllProducts() {
+        List<Products> list;
+        try {
+            list = productsService.getAllProducts();
+        } catch (Exception e) {
+            return new Result().setError("系统繁忙，请刷新后重试");
+        }
+        return new Result().setData(list, 0, list.size());
     }
 
     @GetMapping("listProducts/{pageIndex}/{pageSize}")

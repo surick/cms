@@ -21,6 +21,10 @@ public class ParentType {
     @Column(columnName = "cn_parent_name")
     private String cnParentName;
 
+    private String name;
+
+    private Integer value;
+
     public Integer getId() {
         return id;
     }
@@ -51,6 +55,22 @@ public class ParentType {
 
     public void setCnParentName(String cnParentName) {
         this.cnParentName = cnParentName;
+    }
+
+    public String getName() {
+        return parentName;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Integer getValue() {
+        return id;
+    }
+
+    public void setValue(Integer value) {
+        this.value = value;
     }
 
     @Override

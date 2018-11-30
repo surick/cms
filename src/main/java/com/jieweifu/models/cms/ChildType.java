@@ -24,6 +24,10 @@ public class ChildType {
 
     private Integer deleted;
 
+    private String name;
+
+    private Integer value;
+
     public Integer getId() {
         return id;
     }
@@ -62,6 +66,22 @@ public class ChildType {
 
     public void setCnChildName(String cnChildName) {
         this.cnChildName = cnChildName;
+    }
+
+    public String getName() {
+        return childName;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Integer getValue() {
+        return id;
+    }
+
+    public void setValue(Integer value) {
+        this.value = value;
     }
 
     @Override

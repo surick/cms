@@ -2,6 +2,7 @@ package com.jieweifu.models.cms;
 
 import com.jieweifu.common.dbservice.Column;
 import com.jieweifu.common.dbservice.Entity;
+import org.springframework.web.multipart.MultipartFile;
 
 /**
  * @author Jin
