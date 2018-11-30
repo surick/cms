@@ -43,8 +43,9 @@ public class ProductsServiceImpl implements ProductsService {
 
     @Override
     public void removeProducts(Integer id) {
-        db.delete()
-                .from(Products.class)
+        db.update()
+                .table(Products.class)
+                .set("deleted", 1)
                 .where("id = ?", id)
                 .execute();
     }

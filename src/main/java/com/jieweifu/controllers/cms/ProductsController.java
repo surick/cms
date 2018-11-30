@@ -59,24 +59,7 @@ public class ProductsController {
     }
 
     @PostMapping("updateProducts")
-    public Result updateProducts(@RequestParam(value = "name") String name,
-                                 @RequestParam(value = "childTypeId") Integer id,
-                                 @RequestParam(value = "content", required = false) String content,
-                                 @RequestParam(value = "file", required = false) MultipartFile file) {
-        Products products = new Products();
-        if (file != null) {
-            try {
-                products.setImgUrl(FileUtil.uploadImage(file, uploadPath));
-            } catch (Exception e) {
-                e.printStackTrace();
-                return new Result().setError("图片上传失败");
-            }
-        }
-        products.setName(name);
-        products.setChildTypeId(id);
-        if (StringUtils.isNotBlank(content)) {
-            products.setContent(content);
-        }
+    public Result updateProducts(@RequestBody Products products) {
         try {
             productsService.updateProducts(products);
         } catch (Exception e) {
