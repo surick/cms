@@ -43,4 +43,21 @@ public class FeedbackServiceImpl implements FeedbackService {
                 .from(Feedback.class)
                 .total();
     }
+
+    @Override
+    public List<Feedback> getAllFeedBacks() {
+        return db.select()
+                .from(Feedback.class)
+                .where("deleted = 0")
+                .queryForList(Feedback.class);
+    }
+
+    @Override
+    public void removeFeedBacks(Integer id) {
+        db.update()
+                .table(Feedback.class)
+                .set("deleted", 1)
+                .where("id = ?", id)
+                .execute();
+    }
 }

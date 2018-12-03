@@ -54,4 +54,28 @@ public class FeedbackController {
         map.put("total", total);
         return new Result().setData(map);
     }
+
+    @GetMapping("getAllFeedBacks")
+    public Result getAllFeedBacks() {
+        List<Feedback> list;
+        try {
+            list = feedbackService.getAllFeedBacks();
+        } catch (Exception e) {
+            return new Result().setError("系统繁忙，请刷新后重试");
+        }
+        return new Result().setData(list, 0, list.size());
+    }
+
+    @DeleteMapping("removeFeedBacks/{id}")
+    public Result removeFeedBacks(@PathVariable("id") Integer id) {
+        if (id < 0) {
+            return new Result().setError("违法参数");
+        }
+        try {
+            feedbackService.removeFeedBacks(id);
+        } catch (Exception e) {
+            return new Result().setError("系统繁忙，请稍后重试");
+        }
+        return new Result().setMessage("删除成功");
+    }
 }

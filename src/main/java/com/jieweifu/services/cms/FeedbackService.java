@@ -29,4 +29,16 @@ public interface FeedbackService {
      * @return
      */
     int getFeedbackTotal();
+
+    /**
+     * 取
+     * @return
+     */
+    List<Feedback> getAllFeedBacks();
+
+    /**
+     * 删
+     * @param id
+     */
+    void removeFeedBacks(Integer id);
 }
