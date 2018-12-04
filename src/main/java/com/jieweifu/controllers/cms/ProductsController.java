@@ -44,7 +44,7 @@ public class ProductsController {
                 return new Result().setError("上传失败，请刷新再试");
             }
         }
-        return new Result().setData(url);
+        return new Result().setData("products/" + url);
     }
 
     @PostMapping("saveProducts")

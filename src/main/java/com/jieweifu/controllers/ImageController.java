@@ -63,13 +63,14 @@ public class ImageController {
     }
 
     private Map<Object, Object> uploadImage(HttpServletRequest request, String path, ImageOptions options) {
-        Map<Object, Object> responseData = new HashMap<>();
+        Map<Object, Object> responseData = new HashMap<>(3);
         try {
-            Image.upload(request, path, options).forEach((key, value) -> responseData.put(key, "http://192.168.3.163:8080/uploads/images/" + value));
+            Image.upload(request, path, options).forEach((key, value) -> responseData.put(key, value));
         } catch (Exception e) {
             e.printStackTrace();
             responseData.put("error", e.toString());
         }
+        responseData.put("url", "http://127.0.0.1/images/" + responseData.get("link"));
         return responseData;
     }
 
