@@ -8,7 +8,9 @@ import com.jieweifu.constants.UserConstant;
 import com.jieweifu.interceptors.AdminAuthAnnotation;
 import com.jieweifu.models.Result;
 import com.jieweifu.models.admin.User;
+import com.jieweifu.models.regex.Regex;
 import com.jieweifu.services.admin.UserService;
+import org.apache.commons.codec.digest.DigestUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.*;
@@ -16,6 +18,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 import java.util.Map;
+import java.util.UUID;
 import java.util.WeakHashMap;
 import java.util.concurrent.TimeUnit;
 
@@ -104,6 +107,33 @@ public class IndexController {
         }
         userService.updateUserPassword(userId, newPassword);
         return new Result().setMessage("密码更新成功");
+    }
+
+    /**
+     * 更新用户密码
+     * @param passInfo
+     * @param errors
+     * @return
+     */
+    @PutMapping("putPassword")
+    public Result putPassword(@Valid @RequestBody PasswordInfo passInfo, Errors errors) {
+        System.out.println(passInfo.oldPassword+"  "+passInfo.newPassword);
+        String password = passInfo.getOldPassword();
+        String newPassword = passInfo.getNewPassword();
+        User user = BaseContextHandler.getUser();
+        System.out.println(user.getId());
+        if (!userService.doUserLogin(user.getId(), password)) {
+            return new Result().setError("原密码错误");
+        }
+        if (!password.matches(Regex.PASSWORD_REX)) {
+            return new Result().setError("新密码格式错误");
+        }
+        String salt = UUID.randomUUID().toString().replace("-", "");
+        user.setPassword(DigestUtils.md5Hex(salt + newPassword));
+        user.setIsFirst(true);
+        user.setSalt(salt);
+        userService.updateUser(user);
+        return new Result().setMessage("修改成功");
     }
 
     /**
