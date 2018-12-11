@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml">
 
 <head>
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
@@ -560,19 +560,20 @@ function position_fixed(el, eltop, elleft){
                                                         </div>
                                                         <div class="content">
                                                             <div class="describe htmledit">
-                                                                <div class="FrontComContent_detail01-0010_htmlbreak" id="FrontComContent_detail01-0010_cont_1" style="display: block;">
+                                                                <div class="FrontComContent_detail01-0010_htmlbreak" id="FrontComContent_detail01-0010_cont_1" style="display: block;"
+                                                                th:utext="${about.content}">
                                                                     <!--TODO:data-->
-                                                                    <p>
-                                                                        <strong><img alt="" src="/imageRepository/b7169697-50a0-4118-825b-56df1ede0bcc.jpg" style="margin-top: 7px; width: 350px; float: right; height: 350px; margin-left: 10px; margin-right: 10px;" /><span style="color: #0112a0;">One: Why install electrical equipment grounding wire<strong>?</strong></span>
-                                                                        </strong><br /> Because, when the motor has a leakage, the metal shell will be charged, if people come into contact with the metal body shell, the risk of an electric shock may occur if the
-                                                                        electrical equipment installed ground wire, the leakage will flow directly into the earth through a ground wire, metal voltage equal to 0, and the human body come into contact with
-                                                                        the metal casing, there will be no danger</p>
-                                                                    <p>
-                                                                        <span style="color: #0112a0;"><strong>Two: Why did you want to install the GFCI?</strong></span><br /> Reason as above, but more of a protection switch, when a leak occurs, the GFCI
-                                                                        to trip off the power immediately, protective equipment and personal safety</p>
-                                                                    <p>
-                                                                        <span style="color: #0112a0;"><strong>Three: for distribution cabinets, switchboards safety requirements?</strong></span><br /> Distribution cabinets, distribution panels must have
-                                                                        a good grounding device</p>
+                                                                    <!--<p>-->
+                                                                        <!--<strong><img alt="" src="/imageRepository/b7169697-50a0-4118-825b-56df1ede0bcc.jpg" style="margin-top: 7px; width: 350px; float: right; height: 350px; margin-left: 10px; margin-right: 10px;" /><span style="color: #0112a0;">One: Why install electrical equipment grounding wire<strong>?</strong></span>-->
+                                                                        <!--</strong><br /> Because, when the motor has a leakage, the metal shell will be charged, if people come into contact with the metal body shell, the risk of an electric shock may occur if the-->
+                                                                        <!--electrical equipment installed ground wire, the leakage will flow directly into the earth through a ground wire, metal voltage equal to 0, and the human body come into contact with-->
+                                                                        <!--the metal casing, there will be no danger</p>-->
+                                                                    <!--<p>-->
+                                                                        <!--<span style="color: #0112a0;"><strong>Two: Why did you want to install the GFCI?</strong></span><br /> Reason as above, but more of a protection switch, when a leak occurs, the GFCI-->
+                                                                        <!--to trip off the power immediately, protective equipment and personal safety</p>-->
+                                                                    <!--<p>-->
+                                                                        <!--<span style="color: #0112a0;"><strong>Three: for distribution cabinets, switchboards safety requirements?</strong></span><br /> Distribution cabinets, distribution panels must have-->
+                                                                        <!--a good grounding device</p>-->
                                                                 </div>
                                                             </div>
                                                         </div>

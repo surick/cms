@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 
 <head>
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
@@ -556,17 +556,18 @@ function position_fixed(el, eltop, elleft){
                                                         </div>
                                                         <div class="content">
                                                             <div class="describe htmledit">
-                                                                <div class="FrontComContent_detail01-0010_htmlbreak" id="FrontComContent_detail01-0010_cont_1" style="display: block;">
+                                                                <div class="FrontComContent_detail01-0010_htmlbreak" id="FrontComContent_detail01-0010_cont_1" style="display: block;"
+                                                                th:utext="${about.content}">
                                                                     <!--TODO:data-->
-                                                                    <p>
-                                                                        <img alt="" src="/imageRepository/7106dd15-b1a5-4a8b-8d92-6a1c2fc53e4e.jpg" style="float: right; margin-right: 10px;" /><span style="color: #0112a0;"><strong>● Quality Management System</strong></span><br
-                                                                        /> &bull; Full implementation of the ISO9001 quality system certification to ensure product quality &quot;zero defect&quot;<br /> &bull; Quality is a clear understanding and a strong
-                                                                        will, the final result of the manufacturing of ...<br /> &bull; Quality Without Borders, is a language ...<br /> &bull; Quality is the goal of long-Royce always challenging ...</p>
-                                                                    <p>
-                                                                        <span style="color: #0112a0;"><strong>● Quality control measures</strong></span><br /> &bull; establish a complete quality management system, strictly in accordance with ISO9001 system
-                                                                        operation.<br /> &bull; Strengthen workers sense of quality to ensure that products manufactured prior to the implementation of 72 hours to run and test the limits.<br /> &bull; Establishment
-                                                                        of raw materials testing, processing, semi-finished products inspection, product testing and other processes.<br /> &bull; strict accordance with the GMP requirements, and business
-                                                                        and technical personnel with the conduct of plant, equipment selection shape, technology, investment budget formulation and related services.</p>
+                                                                    <!--<p>-->
+                                                                        <!--<img alt="" src="/imageRepository/7106dd15-b1a5-4a8b-8d92-6a1c2fc53e4e.jpg" style="float: right; margin-right: 10px;" /><span style="color: #0112a0;"><strong>● Quality Management System</strong></span><br-->
+                                                                        <!--/> &bull; Full implementation of the ISO9001 quality system certification to ensure product quality &quot;zero defect&quot;<br /> &bull; Quality is a clear understanding and a strong-->
+                                                                        <!--will, the final result of the manufacturing of ...<br /> &bull; Quality Without Borders, is a language ...<br /> &bull; Quality is the goal of long-Royce always challenging ...</p>-->
+                                                                    <!--<p>-->
+                                                                        <!--<span style="color: #0112a0;"><strong>● Quality control measures</strong></span><br /> &bull; establish a complete quality management system, strictly in accordance with ISO9001 system-->
+                                                                        <!--operation.<br /> &bull; Strengthen workers sense of quality to ensure that products manufactured prior to the implementation of 72 hours to run and test the limits.<br /> &bull; Establishment-->
+                                                                        <!--of raw materials testing, processing, semi-finished products inspection, product testing and other processes.<br /> &bull; strict accordance with the GMP requirements, and business-->
+                                                                        <!--and technical personnel with the conduct of plant, equipment selection shape, technology, investment budget formulation and related services.</p>-->
                                                                 </div>
                                                             </div>
                                                         </div>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml">
 
 <head>
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
@@ -24,7 +24,7 @@
         <title>欣泰国际有限公司</title>
         <!--[if lt IE 7]>
         <style type="text/css">
-            #logo,#menuyapng { behavior: url(/images/my/iepngfix.htc) }
+            #logo,#menuyapng { behavior: url(/img/my/iepngfix.htc) }
         </style>
         <![endif]-->
         <script type="text/javascript">
@@ -41,21 +41,36 @@
                 }
             }
 
-            function setHomepage() {　 // 设置首页
+            function setHomepage() {　 // 设置首页  
+
                 if (document.all) {
+
                     document.body.style.behavior = 'url(#default#homepage)';
+
                     document.body.setHomePage('http://www.baidu.com');
+
                 } else if (window.sidebar) {
+
                     if (window.netscape) {
+
                         try {
+
                             netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+
                         } catch (e) {
+
+
                             alert("该操作被浏览器拒绝，如果想启用该功能，请在地址栏内输入 about:config,然后将项 signed.applets.codebase_principal_support 值该为true");
+
                         }
                     }
+
                     var prefs = Components.classes['@mozilla.org/preferences-service;1'].getService(Components.interfaces.nsIPrefBranch);
+
                     prefs.setCharPref('browser.startup.homepage', 'http://www.baidu.com');
+
                 }
+
             }
         </script>
         <link _cke_saved_href="/img/favicon.ico" href="/img/favicon.ico" rel="shortcut icon" />
@@ -247,45 +262,45 @@ $(document).ready(function() {
                   <li id="home">               
                       <a href="/index.html">             
                             <span class="cn">首页</span>  
-                   <span class="cn">Home</span>
+                   <span class="en">Home</span> 
                   </a> 
                 </li>  
                 <li id="menu1"> 
                   <a href="/about.html"> 
                     <span class="cn">关于我们</span>  
-                    <span class="cn">About us</span>
+                    <span class="en">About us</span> 
                   </a> 
                 </li>  
                 <li id="menu2"> 
                   <a href="/news_list.html"> 
                     <span class="cn">产品介绍</span>  
-                    <span class="cn">News Center</span>
+                    <span class="en">News Center</span> 
                   </a> 
                 </li>  
                 <li id="menu3"> 
                   <a href="/products_list.html"> 
                     <span class="cn">研发与服务</span>  
-                    <span class="cn">products</span>
+                    <span class="en">products</span> 
                   </a> 
                 </li>  
                 <li id="menu4"> 
                   <a href="/about2.html"> 
                     <span class="cn">客户需求</span>  
-                    <span class="cn">Technical</span>
+                    <span class="en">Technical</span> 
                   </a> 
                 </li>  
                 <li id="menu5"> 
                   <a href="/feedback">
                     <span class="cn">加入我们</span>  
-                    <span class="cn">Messages</span>
+                    <span class="en">Messages</span> 
                   </a> 
                 </li> 
               </ul>-->
                         <ul id="menu">
-                            <li id="home"> <a class="drop" href="/">HOME</a>
+                            <li id="home"> <a class="drop" href="/cn">首页</a>
                             </li>
                             <li id="menu1">
-                                <a class="drop" href="/about">ABOUT</a>
+                                <a class="drop" href="/cn/about">关于</a>
                                 <!--<div class="dropdown_1column">        
                 <div class="col_1">                
                     <ul class="simple">
@@ -297,7 +312,7 @@ $(document).ready(function() {
 		</div>        -->
                             </li>
                             <li id="menu2">
-                                <a class="drop" href="/products_list">PRODUCTS</a>
+                                <a class="drop" href="/cn/products_list">产品</a>
                                 <!--<div class="dropdown_1column">        
                 <div class="col_1">                
                     <ul class="simple">
@@ -312,10 +327,10 @@ $(document).ready(function() {
 		</div>        -->
                             </li>
                             <li id="menu3">
-                                <a class="drop" href="/feedback">FEEDBACK</a>
+                                <a class="drop" href="/cn/feedback">反馈</a>
                             </li>
                             <li id="menu4">
-                                <a class="drop" href="/contact">CONTACT</a>
+                                <a class="drop" href="/cn/contact">联系我们</a>
                             </li>
                         </ul>
                     </div>
@@ -429,7 +444,7 @@ function position_fixed(el, eltop, elleft){
             <div id="box_banner" class="box_bannern">
                 <div id="elem-FrontPublic_slideShow01-00ss1" name="幻灯展示样式" class="columnSpace">
                     <script type="text/javascript" src="/js/public/FrontPublic_slideShow01.js"></script>
-                    <script type="text/javascript" src="/js/about/about.js"></script>
+                    <script type="text/javascript" src="/js/about/tech.js"></script>
                     <div id="FrontPublic_slideShow01-00ss1" class="FrontPublic_slideShow01-d1_c1">
                         <script type="text/javascript" src="/js/common/png.js"></script>
                         <div class="slide-contente">
@@ -465,7 +480,7 @@ function position_fixed(el, eltop, elleft){
                             <!--内页左侧 开始-->
                             <div id="sub_left">
                                 <div class="sub_left_1">
-                                    <h3><span class="titleCn">ABOUT US</span><span class="titleEn"></span></h3>
+                                    <h3><span class="titleCn">关于我们</span><span class="titleEn"></span></h3>
                                     <div class="sub_category">
                                         <div id="box_1ya">
                                             <div class="columnSpace" id="elem-FrontComContent_list01-001" name="通用内容列表样式">
@@ -489,10 +504,10 @@ function position_fixed(el, eltop, elleft){
                                                                             // ]]>
                                                                         </script>
                                                                         <ul class="list2">
-                                                                            <li class="menu-none"><a id="comContent2_5" href="/company_profile" title="Company Profile" class="menu-text1">Company Profile</a></li>
-                                                                            <li class="menu-none"><a id="comContent2_6" href="/culture" title="Culture" class="menu-text1">Culture</a></li>
-                                                                            <li class="menu-none"><a id="comContent2_8" href="/honors" title="Honors" class="menu-text1">Honors</a></li>
-                                                                            <li class="menu-none"><a id="comContent2_4" href="/technology" title="Technology" class="menu-text1">Technology</a></li>
+                                                                            <li class="menu-none"><a id="comContent2_5" href="/cn/about" title="公司资料" class="menu-text1">公司资料</a></li>
+                                                                            <li class="menu-none"><a id="comContent2_6" href="/cn/culture" title="公司文化" class="menu-text1">公司文化</a></li>
+                                                                            <li class="menu-none"><a id="comContent2_8" href="/cn/honors" title="公司荣誉" class="menu-text1">公司荣誉</a></li>
+                                                                            <li class="menu-none"><a id="comContent2_4" href="/cn/technology" title="公司技术" class="menu-text1">公司技术</a></li>
                                                                         </ul>
                                                                     </div>
                                                                 </div>
@@ -528,7 +543,7 @@ function position_fixed(el, eltop, elleft){
                             <div id="sub_right">
                                 <div id="sub_right_title">
                                     <h2>
-                                        <span class="location">LOCAL:<a href="/">HOME</a> - ABOUT US - <span class="sitemap"></span></span><span class="sitemap"></span>
+                                        <span class="location">位置:<a href="/cn">主页</a> - 关于我们 - <span class="sitemap"></span></span><span class="sitemap"></span>
                                     </h2>
                                 </div>
                                 <div id="right_content">
@@ -541,23 +556,24 @@ function position_fixed(el, eltop, elleft){
                                                     <script type="text/javascript" src="/js/comcontent/FrontComContent_detail01.js"></script>
                                                     <div id="FrontComContent_detail01-0010" class="FrontComContent_detail01-d1_c1">
                                                         <div class="title">
-                                                            <h3>Company Profile</h3>
+                                                            <h3>公司技术</h3>
                                                         </div>
                                                         <div class="content">
                                                             <div class="describe htmledit">
                                                                 <div class="FrontComContent_detail01-0010_htmlbreak" id="FrontComContent_detail01-0010_cont_1" style="display: block;"
-                                                                     th:utext="${about.content}">
-                                                                    <!-- TODO:data-->
+                                                                th:utext="${about.cnContent}">
+                                                                    <!--TODO:data-->
                                                                     <!--<p>-->
-                                                                        <!--<img src="/imageRepository/42b31547-5236-431e-9749-3a55d1e2f466.jpg" style="margin-top: 7px; width: 220px; float: right; height: 282px; margin-left: 10px; margin-right: 10px;" />TAI&trade;-->
-                                                                        <!--is one of a professional exporter with 2 exporting departments: one for AUTO ENGINE PARTS: oil pumps, oil pump rotors,<span _fck_bookmark="1" style="display: none;">&nbsp;</span>                                                                        timing kits(including timing chains, timing gears, tensioners, guide rails),valve lifters(tappets), spark plugs etc; &nbsp;the other one for&nbsp;POWER TRANSMISSION PARTS:roller chains,s.s.-->
-                                                                        <!--chains,&nbsp;agricultural chains,steel detachable chains,special chains, sprockets, s.s. sprockets, HRC couplings, pulleys, bushes etc.&nbsp;All these products have been supplied-->
-                                                                        <!--regularly to&nbsp;World Wide for over 15 years.</p>-->
+                                                                        <!--<strong><img alt="" src="/imageRepository/b7169697-50a0-4118-825b-56df1ede0bcc.jpg" style="margin-top: 7px; width: 350px; float: right; height: 350px; margin-left: 10px; margin-right: 10px;" /><span style="color: #0112a0;">One: Why install electrical equipment grounding wire<strong>?</strong></span>-->
+                                                                        <!--</strong><br /> Because, when the motor has a leakage, the metal shell will be charged, if people come into contact with the metal body shell, the risk of an electric shock may occur if the-->
+                                                                        <!--electrical equipment installed ground wire, the leakage will flow directly into the earth through a ground wire, metal voltage equal to 0, and the human body come into contact with-->
+                                                                        <!--the metal casing, there will be no danger</p>-->
                                                                     <!--<p>-->
-                                                                        <!--<br /> Since we offer our customers&nbsp;Surefooted&nbsp;work<span _fck_bookmark="1" style="display: none;">&nbsp;</span>,&nbsp;Prompt reply,&nbsp;and&nbsp; Special&nbsp;service all-->
-                                                                        <!--the time, TAI&trade; has set up a well sales &amp; service network. However, we hope our products can meet the request from new customers, and we can cooperate with you on mutual-->
-                                                                        <!--benefit.<br /> &nbsp;-->
-                                                                    <!--</p>-->
+                                                                        <!--<span style="color: #0112a0;"><strong>Two: Why did you want to install the GFCI?</strong></span><br /> Reason as above, but more of a protection switch, when a leak occurs, the GFCI-->
+                                                                        <!--to trip off the power immediately, protective equipment and personal safety</p>-->
+                                                                    <!--<p>-->
+                                                                        <!--<span style="color: #0112a0;"><strong>Three: for distribution cabinets, switchboards safety requirements?</strong></span><br /> Distribution cabinets, distribution panels must have-->
+                                                                        <!--a good grounding device</p>-->
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -612,7 +628,6 @@ function position_fixed(el, eltop, elleft){
             </div>
         </div>
         <!--内页左侧 结束-->
-
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
 
         <title>欣泰国际有限公司</title>
@@ -631,57 +646,58 @@ function position_fixed(el, eltop, elleft){
 
                             <div id="FrontSpecifies_show01-14239672938481" class="FrontSpecifies_show01-d1_c1">
                                 <table border="0" cellpadding="0" cellspacing="0" style="text-align: center; width: 600px; height: 159px; padding-top: 20px;">
+
                                     <tbody>
-                                        <tr style="font-size: 14px; font-weight: bold;">
-                                            <td>
-                                                ABOUT US</td>
-                                            <td>
-                                                RPODUCTS</td>
-                                            <td>
-                                                FEEDBACK</td>
-                                            <td>
-                                                CONTACT US</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <a href="/about">PROFILE</a></td>
-                                            <td>
-                                                <a href="/products_list">AUTO PARTS</a></td>
-                                            <td>
-                                                <a href="/feedback">MESSAGES</a></td>
-                                            <td>
-                                                <a href="/contact">TRANMISSION PARTS</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <a href="/culture">CULTURE</a></td>
-                                            <td>
-                                                <a href="/products_list">TRANMISSION PARTS</a></td>
-                                            <td>
-                                                <a href="/messages_list">VIEW MSG</a></td>
-                                            <td>
-                                                <a href="/products_list">AUTO PARTS</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <a href="/honors">HONOR</a></td>
-                                            <td>
-                                                &nbsp;</td>
-                                            <td>
-                                                &nbsp;</td>
-                                            <td>
-                                                &nbsp;</td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                <a href="/technology">TECHNOLOGY</a></td>
-                                            <td>
-                                                &nbsp;</td>
-                                            <td>
-                                                &nbsp;</td>
-                                            <td>
-                                                &nbsp;</td>
-                                        </tr>
+                                    <tr style="font-size: 14px; font-weight: bold;">
+                                        <td>
+                                            关于我们</td>
+                                        <td>
+                                            产品</td>
+                                        <td>
+                                            反馈</td>
+                                        <td>
+                                            联系我们</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a href="/cn/about">公司资料</a></td>
+                                        <td>
+                                            <a href="/cn/products_list">AUTO PARTS</a></td>
+                                        <td>
+                                            <a href="/cn/feedback">反馈</a></td>
+                                        <td>
+                                            <a href="/cn/contact">联系我们</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a href="/cn/culture">公司文化</a></td>
+                                        <td>
+                                            <a href="/cn/products_list">TRANMISSION PARTS</a></td>
+                                        <td>
+                                            <a href="/cn/feedback_list">反馈列表</a></td>
+                                        <td>
+                                            &nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a href="/cn/honors">公司荣誉</a></td>
+                                        <td>
+                                            &nbsp;</td>
+                                        <td>
+                                            &nbsp;</td>
+                                        <td>
+                                            &nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a href="/cn/technology">公司技术</a></td>
+                                        <td>
+                                            &nbsp;</td>
+                                        <td>
+                                            &nbsp;</td>
+                                        <td>
+                                            &nbsp;</td>
+                                    </tr>
                                     </tbody>
                                 </table>
                             </div>
@@ -708,7 +724,6 @@ function position_fixed(el, eltop, elleft){
                     <div class="clearBoth"></div>
 
                 </div>
-
                 <!-- 插入组件的位置-->
 
             </div>

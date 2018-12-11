@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
-
 <head>
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
     <title>Timing chain|valve tappet|oil pump|timing kit|water pump 【昆山智泉機械有限公司】</title>
@@ -12,13 +11,16 @@
     <script type="text/javascript" src="/js/lib.min.js"></script>
     <script language="javascript">
         $(document).ready(function() {
+
             $(".sitemap").text($(".FrontComContent_detail01-d1_c1 .title h3").text())
+
         })
     </script>
-    <script type="text/javascript" src="/img/my/js/jscroll.js"></script>
+    <!--   <script type="text/javascript" src="/images/my/js/jscroll.js" ></script>
+-->
 </head>
 
-<body id="sub1">
+<body id="contact">
     <div class="pageWidth" id="box0_root">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
         <title>欣泰国际有限公司</title>
@@ -41,21 +43,36 @@
                 }
             }
 
-            function setHomepage() {　 // 设置首页
+            function setHomepage() {　 // 设置首页  
+
                 if (document.all) {
+
                     document.body.style.behavior = 'url(#default#homepage)';
+
                     document.body.setHomePage('http://www.baidu.com');
+
                 } else if (window.sidebar) {
+
                     if (window.netscape) {
+
                         try {
+
                             netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+
                         } catch (e) {
+
+
                             alert("该操作被浏览器拒绝，如果想启用该功能，请在地址栏内输入 about:config,然后将项 signed.applets.codebase_principal_support 值该为true");
+
                         }
                     }
+
                     var prefs = Components.classes['@mozilla.org/preferences-service;1'].getService(Components.interfaces.nsIPrefBranch);
+
                     prefs.setCharPref('browser.startup.homepage', 'http://www.baidu.com');
+
                 }
+
             }
         </script>
         <link _cke_saved_href="/img/favicon.ico" href="/img/favicon.ico" rel="shortcut icon" />
@@ -240,52 +257,52 @@ $(document).ready(function() {
 </script> -->
         <div id="header02">
             <div id="header">
-                <div id="logo"> <a href="/"></a> </div>
+                <div id="logo"> <a href="/cn"></a> </div>
                 <div id="menuya">
                     <div id="menu">
                         <!--<ul id="hnav">               
                   <li id="home">               
                       <a href="/index.html">             
                             <span class="cn">首页</span>  
-                   <span class="cn">Home</span>
+                   <span class="en">Home</span> 
                   </a> 
                 </li>  
                 <li id="menu1"> 
                   <a href="/about.html"> 
                     <span class="cn">关于我们</span>  
-                    <span class="cn">About us</span>
+                    <span class="en">About us</span> 
                   </a> 
                 </li>  
                 <li id="menu2"> 
                   <a href="/news_list.html"> 
                     <span class="cn">产品介绍</span>  
-                    <span class="cn">News Center</span>
+                    <span class="en">News Center</span> 
                   </a> 
                 </li>  
                 <li id="menu3"> 
                   <a href="/products_list.html"> 
                     <span class="cn">研发与服务</span>  
-                    <span class="cn">products</span>
+                    <span class="en">products</span> 
                   </a> 
                 </li>  
                 <li id="menu4"> 
                   <a href="/about2.html"> 
                     <span class="cn">客户需求</span>  
-                    <span class="cn">Technical</span>
+                    <span class="en">Technical</span> 
                   </a> 
                 </li>  
                 <li id="menu5"> 
                   <a href="/feedback">
                     <span class="cn">加入我们</span>  
-                    <span class="cn">Messages</span>
+                    <span class="en">Messages</span> 
                   </a> 
                 </li> 
               </ul>-->
                         <ul id="menu">
-                            <li id="home"> <a class="drop" href="/">HOME</a>
+                            <li id="home"> <a class="drop" href="/cn">首页</a>
                             </li>
                             <li id="menu1">
-                                <a class="drop" href="/about">ABOUT</a>
+                                <a class="drop" href="/cn/about">关于</a>
                                 <!--<div class="dropdown_1column">        
                 <div class="col_1">                
                     <ul class="simple">
@@ -297,7 +314,7 @@ $(document).ready(function() {
 		</div>        -->
                             </li>
                             <li id="menu2">
-                                <a class="drop" href="/products_list">PRODUCTS</a>
+                                <a class="drop" href="/cn/products_list">产品</a>
                                 <!--<div class="dropdown_1column">        
                 <div class="col_1">                
                     <ul class="simple">
@@ -312,10 +329,10 @@ $(document).ready(function() {
 		</div>        -->
                             </li>
                             <li id="menu3">
-                                <a class="drop" href="/feedback">FEEDBACK</a>
+                                <a class="drop" href="/cn/feedback">反馈</a>
                             </li>
                             <li id="menu4">
-                                <a class="drop" href="/contact">CONTACT</a>
+                                <a class="drop" href="/cn/contact">联系我们</a>
                             </li>
                         </ul>
                     </div>
@@ -424,12 +441,11 @@ function position_fixed(el, eltop, elleft){
 
 <![endif]-->
 
-
         <div id="sub_center">
-            <div id="box_banner" class="box_bannern">
-                <div id="elem-FrontPublic_slideShow01-00ss1" name="幻灯展示样式" class="columnSpace">
+            <div class="box_bannern" id="box_banner">
+                <div class="columnSpace" id="elem-FrontPublic_slideShow01-00ss1" name="幻灯展示样式">
                     <script type="text/javascript" src="/js/public/FrontPublic_slideShow01.js"></script>
-                    <script type="text/javascript" src="/js/about/about.js"></script>
+                    <script type="text/javascript" src="/js/contact/contact.js"></script>
                     <div id="FrontPublic_slideShow01-00ss1" class="FrontPublic_slideShow01-d1_c1">
                         <script type="text/javascript" src="/js/common/png.js"></script>
                         <div class="slide-contente">
@@ -465,54 +481,32 @@ function position_fixed(el, eltop, elleft){
                             <!--内页左侧 开始-->
                             <div id="sub_left">
                                 <div class="sub_left_1">
-                                    <h3><span class="titleCn">ABOUT US</span><span class="titleEn"></span></h3>
+                                    <h3> <span class="titleCn">联系我们</span>
+                                        <span class="titleEn"></span>
+                                    </h3>
                                     <div class="sub_category">
                                         <div id="box_1ya">
-                                            <div class="columnSpace" id="elem-FrontComContent_list01-001" name="通用内容列表样式">
+                                            <div class="columnSpace" id="elem-FrontComContent_list01-00f100144" name="通用内容列表样式">
                                                 <script type="text/javascript" src="/js/comcontent/FrontComContent_list01.js"></script>
-                                                <!-- 装饰器样式开始 -->
-                                                <div class="border_46">
-                                                    <div class="border_46-topr">
-                                                        <div class="border_46-topl"></div>
-                                                    </div>
-                                                    <div class="border_46-midr">
-                                                        <div class="border_46-midl">
-                                                            <div class="borderContent">
-                                                                <div id="FrontComContent_list01-001" class="FrontComContent_list01-d1_c1">
-                                                                    <div class="menu-first">
-                                                                        <script type="text/javascript">
-                                                                            //<![CDATA[
-                                                                            FrontComContent_list01['FrontComContent_list01-001_init'] = function() {
-                                                                                FrontComContent_list01.d1extNoContainCategoryAlternate('FrontComContent_list01-001');
-                                                                            }
-                                                                            $(FrontComContent_list01['FrontComContent_list01-001_init']);
-                                                                            // ]]>
-                                                                        </script>
-                                                                        <ul class="list2">
-                                                                            <li class="menu-none"><a id="comContent2_5" href="/company_profile" title="Company Profile" class="menu-text1">Company Profile</a></li>
-                                                                            <li class="menu-none"><a id="comContent2_6" href="/culture" title="Culture" class="menu-text1">Culture</a></li>
-                                                                            <li class="menu-none"><a id="comContent2_8" href="/honors" title="Honors" class="menu-text1">Honors</a></li>
-                                                                            <li class="menu-none"><a id="comContent2_4" href="/technology" title="Technology" class="menu-text1">Technology</a></li>
-                                                                        </ul>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="clearBoth"></div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="border_46-footerr">
-                                                        <div class="border_46-footerl"></div>
+                                                <div id="FrontComContent_list01-00f100144" class="FrontComContent_list01-d1_c1">
+                                                    <div class="menu-first">
+                                                        <script type="text/javascript">
+                                                            //<![CDATA[
+                                                            FrontComContent_list01['FrontComContent_list01-00f100144_init'] = function() {
+                                                                FrontComContent_list01.d1extNoContainCategoryAlternate('FrontComContent_list01-00f100144');
+                                                            }
+                                                            $(FrontComContent_list01['FrontComContent_list01-00f100144_init']);
+                                                            // ]]>
+                                                        </script>
                                                     </div>
                                                 </div>
-                                                <!-- 装饰器样式结束 -->
                                             </div>
                                         </div>
                                     </div>
                                     <div class="sub_btm"></div>
-
                                 </div>
                                 <div class="sub_left_2">
-                                    <p class="sub_title"></p>
+                                    <p class="sub_title" />
                                     <div class="sub_cate" id="box_kkk">
                                         <div xmlns="" class="columnSpace" id="elem-FrontSpecifies_show01-13sgg780ff3" name="说明页">
                                             <div id="FrontSpecifies_show01-13sgg780ff3" class="FrontSpecifies_show01-d1_c1">
@@ -528,7 +522,11 @@ function position_fixed(el, eltop, elleft){
                             <div id="sub_right">
                                 <div id="sub_right_title">
                                     <h2>
-                                        <span class="location">LOCAL:<a href="/">HOME</a> - ABOUT US - <span class="sitemap"></span></span><span class="sitemap"></span>
+                                        <span class="location">位置:
+                      <a href="/cn">主页</a> - 联系我们 -
+                      <span class="sitemap"></span>
+                                        </span>
+                                        <span class="sitemap"></span>
                                     </h2>
                                 </div>
                                 <div id="right_content">
@@ -537,27 +535,35 @@ function position_fixed(el, eltop, elleft){
                                         <!-- 插入组件的位置-->
                                         <div class="Rcontent">
                                             <div id="box_2">
-                                                <div class="columnSpace" id="elem-FrontComContent_detail01-0010" name="通用内容详细信息样式">
+                                                <div class="columnSpace" id="elem-FrontComContent_detail01-00f100144" name="通用内容详细信息样式">
                                                     <script type="text/javascript" src="/js/comcontent/FrontComContent_detail01.js"></script>
-                                                    <div id="FrontComContent_detail01-0010" class="FrontComContent_detail01-d1_c1">
+                                                    <div id="FrontComContent_detail01-00f100144" class="FrontComContent_detail01-d1_c1">
                                                         <div class="title">
-                                                            <h3>Company Profile</h3>
+                                                            <h3>联系我们</h3>
                                                         </div>
                                                         <div class="content">
                                                             <div class="describe htmledit">
-                                                                <div class="FrontComContent_detail01-0010_htmlbreak" id="FrontComContent_detail01-0010_cont_1" style="display: block;"
-                                                                     th:utext="${about.content}">
-                                                                    <!-- TODO:data-->
+                                                                <div class="FrontComContent_detail01-00f100144_htmlbreak" id="FrontComContent_detail01-00f100144_cont_1" style="display: block;"
+                                                                th:utext="${contact.cnContent}">
+                                                                    <!--TODO:data-->
                                                                     <!--<p>-->
-                                                                        <!--<img src="/imageRepository/42b31547-5236-431e-9749-3a55d1e2f466.jpg" style="margin-top: 7px; width: 220px; float: right; height: 282px; margin-left: 10px; margin-right: 10px;" />TAI&trade;-->
-                                                                        <!--is one of a professional exporter with 2 exporting departments: one for AUTO ENGINE PARTS: oil pumps, oil pump rotors,<span _fck_bookmark="1" style="display: none;">&nbsp;</span>                                                                        timing kits(including timing chains, timing gears, tensioners, guide rails),valve lifters(tappets), spark plugs etc; &nbsp;the other one for&nbsp;POWER TRANSMISSION PARTS:roller chains,s.s.-->
-                                                                        <!--chains,&nbsp;agricultural chains,steel detachable chains,special chains, sprockets, s.s. sprockets, HRC couplings, pulleys, bushes etc.&nbsp;All these products have been supplied-->
-                                                                        <!--regularly to&nbsp;World Wide for over 15 years.</p>-->
+                                                                        <!--<span style="color: #0000cd;"><strong>昆山智泉機械有限公司</strong></span></p>-->
                                                                     <!--<p>-->
-                                                                        <!--<br /> Since we offer our customers&nbsp;Surefooted&nbsp;work<span _fck_bookmark="1" style="display: none;">&nbsp;</span>,&nbsp;Prompt reply,&nbsp;and&nbsp; Special&nbsp;service all-->
-                                                                        <!--the time, TAI&trade; has set up a well sales &amp; service network. However, we hope our products can meet the request from new customers, and we can cooperate with you on mutual-->
-                                                                        <!--benefit.<br /> &nbsp;-->
-                                                                    <!--</p>-->
+                                                                        <!--Tel:+86-512-65830037</p>-->
+                                                                    <!--<p>-->
+                                                                        <!--Fax:+86-512-65529992</p>-->
+                                                                    <!--<p>-->
+                                                                        <!--E-mail:<a href="mailto:tai@tran-auto.com">tai@tran-auto.com</a></p>-->
+                                                                    <!--<p>-->
+                                                                        <!--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="mailto:tai803@tran-auto.com">tai803@tran-auto.com</a></p>-->
+                                                                    <!--<p>-->
+                                                                        <!--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="mailto:tai804@tran-auto.com">tai804@tran-auto.com</a></p>-->
+                                                                    <!--<p>-->
+                                                                        <!--P.C:215011</p>-->
+                                                                    <!--<p>-->
+                                                                        <!--Add:716 Gold River Center,No.88 Shishan Rd., Suzhou, P.R.China</p>-->
+                                                                    <!--<p>-->
+                                                                        <!--<strong>Export Company: <span style="color: #0000cd;">SUZHOU HENGXIANG IMPORT &amp; EXPORT CO., LTD.</span></strong></p>-->
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -565,40 +571,6 @@ function position_fixed(el, eltop, elleft){
                                                 </div>
                                             </div>
                                         </div>
-                                        <script type="text/javascript">
-                                            $(document).ready(function() {
-                                                $(".Rcontent").jscroll({
-                                                    W: "4px",
-                                                    BgUrl: "url(/img/my/s_bg2.gif)",
-                                                    Bg: "-7px 0 repeat-y",
-                                                    Bar: {
-                                                        Bd: {
-                                                            Out: "#e3e3e3",
-                                                            Hover: "#e3e3e3"
-                                                        },
-                                                        Bg: {
-                                                            Out: "-19px 0 repeat-y",
-                                                            Hover: "-19px 0 repeat-y",
-                                                            Focus: "-19px 0 repeat-y"
-                                                        }
-                                                    },
-                                                    Btn: {
-                                                        btn: true,
-                                                        uBg: {
-                                                            Out: "0 0",
-                                                            Hover: "0px 0",
-                                                            Focus: "0px 0"
-                                                        },
-                                                        dBg: {
-                                                            Out: "0 -8px",
-                                                            Hover: "0px -8px",
-                                                            Focus: "0px -8px"
-                                                        }
-                                                    },
-                                                    Fn: function() {}
-                                                });
-                                            });
-                                        </script>
                                         <!-- 插入组件的位置-->
                                         <div class="btm"></div>
                                     </div>
@@ -612,7 +584,6 @@ function position_fixed(el, eltop, elleft){
             </div>
         </div>
         <!--内页左侧 结束-->
-
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
 
         <title>欣泰国际有限公司</title>
@@ -634,37 +605,37 @@ function position_fixed(el, eltop, elleft){
                                     <tbody>
                                         <tr style="font-size: 14px; font-weight: bold;">
                                             <td>
-                                                ABOUT US</td>
+                                                关于我们</td>
                                             <td>
-                                                RPODUCTS</td>
+                                                产品</td>
                                             <td>
-                                                FEEDBACK</td>
+                                                反馈</td>
                                             <td>
-                                                CONTACT US</td>
+                                                联系我们</td>
                                         </tr>
                                         <tr>
                                             <td>
-                                                <a href="/about">PROFILE</a></td>
+                                                <a href="/cn/about">公司资料</a></td>
                                             <td>
-                                                <a href="/products_list">AUTO PARTS</a></td>
+                                                <a href="/cn/products_list">AUTO PARTS</a></td>
                                             <td>
-                                                <a href="/feedback">MESSAGES</a></td>
+                                                <a href="/cn/feedback">反馈</a></td>
                                             <td>
-                                                <a href="/contact">TRANMISSION PARTS</a></td>
+                                                <a href="/cn/contact">联系</a></td>
                                         </tr>
                                         <tr>
                                             <td>
-                                                <a href="/culture">CULTURE</a></td>
+                                                <a href="/cn/culture">公司文化</a></td>
                                             <td>
-                                                <a href="/products_list">TRANMISSION PARTS</a></td>
+                                                <a href="/cn/products_list">TRANMISSION PARTS</a></td>
                                             <td>
-                                                <a href="/messages_list">VIEW MSG</a></td>
+                                                <a href="/cn/feedback_list">反馈中心</a></td>
                                             <td>
-                                                <a href="/products_list">AUTO PARTS</a></td>
+                                                &nbsp;</td>
                                         </tr>
                                         <tr>
                                             <td>
-                                                <a href="/honors">HONOR</a></td>
+                                                <a href="/cn/honors">公司荣誉</a></td>
                                             <td>
                                                 &nbsp;</td>
                                             <td>
@@ -674,7 +645,7 @@ function position_fixed(el, eltop, elleft){
                                         </tr>
                                         <tr>
                                             <td>
-                                                <a href="/technology">TECHNOLOGY</a></td>
+                                                <a href="/cn/technology">公司技术</a></td>
                                             <td>
                                                 &nbsp;</td>
                                             <td>
@@ -745,8 +716,9 @@ function position_fixed(el, eltop, elleft){
         </div>
 
 
+
         <!--内页右侧 开始-->
-        <div id="sub_Aboutljc">关于我们</div>
+        <div id="sub_Aboutljc">联系我们</div>
     </div>
 </body>
 

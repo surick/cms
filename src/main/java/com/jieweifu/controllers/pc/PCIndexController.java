@@ -15,8 +15,8 @@ public class PCIndexController {
         return "index";
     }
 
-    @GetMapping("/en/index")
+    @GetMapping("/cn")
     public String enIndex() {
-        return "en/index";
+        return "cn/index";
     }
 }
