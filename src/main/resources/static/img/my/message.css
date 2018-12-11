@@ -1,0 +1,543 @@
+@charset "utf-8";
+/** 全局样式 **/
+
+#FrontMessages_emit01-001_submit {
+    background: #0088d3;
+    border: 0;
+    color: #12135c;
+    height: 35px;
+    width: 123px;
+    line-height: 40px;
+    font-family: "微软雅黑";
+    font-size: 14px;
+}
+
+.FrontMessages_emit01-d1_c1 {
+    width: 100%;
+    margin: 0 auto;
+    clear: both;
+    text-align: left;
+}
+
+/** 链接 **/
+
+.comptitle_42 {
+    display: none;
+}
+
+.FrontMessages_emit01-d1_c1 a:link {
+    color: #06c;
+    text-decoration: underline;
+}
+
+.FrontMessages_emit01-d1_c1 a:visited {
+    color: #06c;
+    text-decoration: underline;
+}
+
+.FrontMessages_emit01-d1_c1 a:hover {
+    color: #06c;
+    text-decoration: none;
+}
+
+.FrontMessages_emit01-d1_c1 a:active {
+    color: #06c;
+    text-decoration: none;
+}
+
+/** 图片 **/
+
+.FrontMessages_emit01-d1_c1 img {
+    vertical-align: middle;
+}
+
+/** 输入框 **/
+
+.FrontMessages_emit01-d1_c1 .input {
+    border: 1px solid #bdd7ee;
+    height: 26px;
+    line-height: 26px;
+    width: 170px;
+}
+
+/** 输入框 灰色字体 **/
+
+.FrontMessages_emit01-d1_c1 .input-gray {
+    color: #9fa0a0;
+}
+
+.FrontMessages_emit01-d1_c1 .textarea {
+    border: 1px solid #bdd7ee;
+    width: 300px;
+    height: 60px;
+    font-size: 12px;
+    margin: 4px 0;
+}
+
+/** 按钮 **/
+
+/*.FrontMessages_emit01-d1_c1 .button {
+
+	width:71px;
+
+	height:31px;
+
+	line-height:31px;
+
+	font-size:14px;
+
+	font-weight:bold;
+
+	color:#12135c;
+
+	border:0;
+
+	cursor:pointer;
+
+}
+
+.FrontMessages_emit01-d1_c1 .button-on {
+
+	background:url(../../images/orders/btn-blue1-01.gif) 0 0 no-repeat;
+
+}
+
+.FrontMessages_emit01-d1_c1 .button-up {
+
+	background:url(../../images/orders/btn-blue1-02.gif) 0 0 no-repeat;
+
+}*/
+
+/** 提示 **/
+
+.FrontMessages_emit01-d1_c1 .tips {
+    padding-left: 10px;
+    color: #A0A0A0;
+}
+
+/** 星号 **/
+
+.FrontMessages_emit01-d1_c1 .fontred {
+    color: #f60;
+}
+
+.FrontMessages_emit01-d1_c1 .fontnone {
+    float: left;
+    width: 11px !important;
+    _width: 8px !important;
+}
+
+/** 表单样式 **/
+
+.FrontMessages_emit01-d1_c1 table {
+    margin-top: 0px;
+}
+
+.FrontMessages_emit01-d1_c1 table th,
+.FrontMessages_emit01-d1_c1 table td {
+    height: 40px;
+}
+
+.FrontMessages_emit01-d1_c1 table th {
+    text-align: right;
+    font-weight: normal;
+    width: 15%;
+}
+
+.FrontMessages_emit01-d1_c1 table td {
+    text-align: left;
+    width: 90%;
+    height: 32px;
+}
+
+.FrontMessages_emit01-d1_c1 table tr.point img {}
+
+.FrontMessages_emit01-d1_c1 table tr.express img {
+    padding: 0 2px;
+}
+
+.FrontMessages_emit01-d1_c1 table tr.verify img {
+    padding: 0 5px;
+}
+
+.FrontMessages_emit01-d1_c1 table tr .text-tip {
+    width: 300px;
+    padding-left: 10px;
+}
+
+.FrontMessages_emit01-d1_c1 table tr.info .text-tip {
+    width: 100%;
+    padding-left: 10px;
+}
+
+.FrontMessages_emit01-d1_c1 .text-oper {
+    margin: 0;
+}
+
+.FrontMessages_emit01-d1_c1 tr.name th {
+    padding-top: 5x;
+    height: 25px;
+}
+
+/**选项**/
+
+.FrontMessages_emit01-d1_c1 table .point td img,
+.FrontMessages_emit01-d1_c1 table .point td span,
+.FrontMessages_emit01-d1_c1 table .point td input {
+    vertical-align: middle;
+}
+
+.FrontMessages_emit01-d1_c1 table .point td span {
+    padding-right: 0;
+    width: 100%;
+}
+
+/** 按钮位置 **/
+
+.FrontMessages_emit01-d1_c1 table tr.button-position {
+    height: 50px;
+}
+
+/**申请成功**/
+
+.FrontMessages_emit01-d1_c1 .success {
+    padding: 20px 0;
+}
+
+.FrontMessages_emit01-d1_c1 .success p {
+    line-height: 30px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.FrontMessages_emit01-d1_c1 tr.verify .text-oper {
+    height: 30px;
+    line-height: 30px;
+}
+
+.FrontMessages_emit01-d1_c1 tr.verify .text-oper * {
+    vertical-align: middle;
+}
+
+/* 页面提示 */
+
+.text-oper {
+    float: left;
+    margin-left: 8px;
+}
+
+.text-tip {
+    float: left;
+    margin: 0 0 0 10px;
+}
+
+.text-tip span {
+    line-height: 15px;
+}
+
+.text-oper span,
+.text-tip span {
+    width: auto !important;
+    word-break: break-all;
+}
+
+.text-tip .tip-default {
+    color: #12135c;
+}
+
+.text-tip .tip-remind {
+    color: #12135c;
+}
+
+.text-tip .tip-ok {
+    background: url(/images/common/tip/ok.gif) left top no-repeat;
+    color: #3bae47;
+    padding-left: 20px;
+    display: inline-block;
+}
+
+.text-tip .tip-error {
+    background: url(/images/common/tip/error.gif) left top no-repeat;
+    color: #e60012;
+    padding-left: 20px;
+    display: inline-block;
+}
+
+.FrontMessages_list01-d1_c1 {
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    clear: both;
+    text-align: left;
+}
+
+/** 链接 **/
+
+.FrontMessages_list01-d1_c1 a:link {
+    color: #06c;
+    text-decoration: underline;
+}
+
+.FrontMessages_list01-d1_c1 a:visited {
+    color: #06c;
+    text-decoration: underline;
+}
+
+.FrontMessages_list01-d1_c1 a:hover {
+    color: #06c;
+    text-decoration: none;
+}
+
+.FrontMessages_list01-d1_c1 a:active {
+    color: #06c;
+    text-decoration: none;
+}
+
+/** 图片 **/
+
+.FrontMessages_list01-d1_c1 img {
+    vertical-align: middle;
+}
+
+/**字体样式**/
+
+.FrontMessages_list01-d1_c1 .foucetext {
+    color: #f08300;
+    font-style: normal;
+}
+
+/**翻页**/
+
+.FrontMessages_list01-d1_c1 .skip-page {
+    clear: both;
+    width: 100%;
+    text-align: right;
+    padding: 10px 0;
+}
+
+.FrontMessages_list01-d1_c1 .skip-page .more {
+    clear: both;
+    width: 100%;
+    text-align: right;
+    padding: 10px 0;
+}
+
+/** 按钮 **/
+
+/*.FrontMessages_list01-d1_c1 .button {
+
+	width:112px;
+
+	height:31px;
+
+	line-height:31px;
+
+	font-size:14px;
+
+	font-weight:bold;
+
+	color:#12135c;
+
+	border:0;
+
+	cursor:pointer;
+
+}
+
+.FrontMessages_list01-d1_c1 .button-on {
+
+	background:url(../../images/messages/btn-blue1-01.gif) 0 0 no-repeat;
+
+}
+
+.FrontMessages_list01-d1_c1 .button-up {
+
+	background:url(../../images/messages/btn-blue1-02.gif) 0 0 no-repeat;
+
+}*/
+
+/**内容样式**/
+
+/**头部样式**/
+
+.FrontMessages_list01-d1_c1 .mestitle {
+    display: none;
+}
+
+.FrontMessages_list01-d1_c1 .mestitle p {
+    padding: 5px 0;
+}
+
+.FrontMessages_list01-d1_c1 .mestitle .name {
+    float: left;
+    width: 65px;
+}
+
+.FrontMessages_list01-d1_c1 .mestitle .tolnumber {
+    padding-right: 20px;
+}
+
+.FrontMessages_list01-d1_c1 .mestitle .tolnumber span {
+    font-weight: bold;
+}
+
+.FrontMessages_list01-d1_c1 .mestitle .point {
+    padding-right: 0;
+}
+
+.FrontMessages_list01-d1_c1 .mestitle .foucetext {
+    font-weight: bold;
+}
+
+.FrontMessages_list01-d1_c1 .btnarea {
+    width: 100%;
+    text-align: right;
+    padding: 10px 0;
+}
+
+/**中间部分**/
+
+.FrontMessages_list01-d1_c1 .center .title {
+    width: 100%;
+    float: left;
+    overflow: hidden;
+    margin: 10px 0;
+}
+
+.FrontMessages_list01-d1_c1 .center .title li {
+    float: left;
+    height: 20px;
+    line-height: 20px;
+    padding: 0 20px;
+    white-space: nowrap;
+    background: url(../../images/messages/mes-icon-01.gif) 0 2px no-repeat;
+}
+
+.FrontMessages_list01-d1_c1 .center .title .person {
+    background: url(../../images/messages/pic-lyr.gif) 0 0 no-repeat;
+}
+
+.FrontMessages_list01-d1_c1 .center .title .sex {
+    background: url(../../images/messages/pic-xb.gif) 0 0 no-repeat;
+}
+
+.FrontMessages_list01-d1_c1 .center .title .time {
+    background: url(../../images/messages/pic-time.gif) 0 0 no-repeat;
+}
+
+.FrontMessages_list01-d1_c1 .center .title .mail {
+    background: url(../../images/messages/pic-mail.gif) 0 0 no-repeat;
+}
+
+.FrontMessages_list01-d1_c1 .center .title .company {
+    background: url(../../images/messages/pic-gsmc.gif) 0 0 no-repeat;
+}
+
+.FrontMessages_list01-d1_c1 .center .title .web {
+    background: url(../../images/messages/pic-web.gif) 0 0 no-repeat;
+}
+
+.FrontMessages_list01-d1_c1 .center .title .area {
+    background: url(../../images/messages/pic-dq.gif) 0 0 no-repeat;
+}
+
+.FrontMessages_list01-d1_c1 .center .title .tel {
+    background: url(../../images/messages/pic-tel.gif) 0 0 no-repeat;
+}
+
+.FrontMessages_list01-d1_c1 .center .title .phone {
+    background: url(../../images/messages/pic-phone.gif) 0 0 no-repeat;
+}
+
+.FrontMessages_list01-d1_c1 .center .title .addres {
+    background: url(../../images/messages/pic-lxdz.gif) 0 0 no-repeat;
+}
+
+.FrontMessages_list01-d1_c1 .center .title span {
+    color: #666;
+}
+
+.FrontMessages_list01-d1_c1 .center .list {
+    clear: both;
+    width: 99%;
+    overflow: hidden;
+    border: 1px solid #bdcee8;
+    /*border-bottom:none;*/
+    background: #fdfeff;
+    margin-bottom: 10px;
+}
+
+.FrontMessages_list01-d1_c1 .center .list li {
+    padding-left: 40px;
+    line-height: 20px;
+}
+
+.FrontMessages_list01-d1_c1 .center .list li span {
+    color: #06c;
+}
+
+.FrontMessages_list01-d1_c1 .center .list .li-head {
+    border: 1px solid #12135c;
+    height: 25px;
+    padding-top: 5px;
+    background: #dcf2fc;
+}
+
+.FrontMessages_list01-d1_c1 .center .list .li-con {
+    clear: both;
+    float: left;
+    width: 100%;
+    overflow: hidden;
+    border: 1px solid #12135c;
+    border-top: none;
+    padding: 5px;
+    background: #f8f8f8;
+}
+
+.FrontMessages_list01-d1_c1 .center .list .li-con .pic {
+    float: left;
+    width: 35px;
+    display: none;
+}
+
+.FrontMessages_list01-d1_c1 .center .list .li-con .info {
+    float: left;
+    width: 100%;
+    /*需要调整*/
+}
+
+.FrontMessages_list01-d1_c1 .center .list .li-con .info span {
+    color: #0d54d0;
+    font-weight: bold;
+}
+
+.FrontMessages_list01-d1_c1 .center .list .li-bottom {
+    border-top: 1px solid #ddd;
+    /*border-bottom:1px solid #9be3f9;*/
+    padding-right: 15px;
+}
+
+.FrontMessages_list01-d1_c1 .center .list .li-bottom span {
+    color: #0d54d0;
+}
+
+/**提示信息**/
+
+.FrontMessages_list01-d1_c1 .alert {
+    padding: 20px 0;
+}
+
+.FrontMessages_list01-d1_c1 .alert p {
+    text-align: center;
+    line-height: 30px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/**提示信息**/
+
+.FrontMessages_list01-d1_c1 .btna {
+    float: right;
+    margin: 0;
+}

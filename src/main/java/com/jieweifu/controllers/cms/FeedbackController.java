@@ -1,6 +1,7 @@
 package com.jieweifu.controllers.cms;
 
 import com.jieweifu.common.utils.ErrorUtil;
+import com.jieweifu.interceptors.AdminAuthAnnotation;
 import com.jieweifu.models.Result;
 import com.jieweifu.models.cms.Feedback;
 import com.jieweifu.services.cms.FeedbackService;
@@ -28,6 +29,7 @@ public class FeedbackController {
         this.feedbackService = feedbackService;
     }
 
+    @AdminAuthAnnotation(check = false)
     @PostMapping("saveFeedback")
     public Result saveFeedback(@Valid @RequestBody Feedback feedback, Errors errors) {
         if (errors.hasErrors()) {

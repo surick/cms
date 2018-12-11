@@ -1,0 +1,152 @@
+@charset "utf-8";
+/** 全局样式 **/
+
+.FrontProducts_list01-d4_c1 {
+    width: 100%;
+    margin: 0 auto;
+    clear: both;
+    height: 100%;
+    overflow: hidden;
+    text-align: left;
+}
+
+.FrontProducts_list01-d4_c1 tr {
+    background: url(/img/my/chanptilte.jpg) repeat-x;
+}
+
+.FrontProducts_list01-d4_c1 ul {
+    width: 100%;
+}
+
+/** 链接 **/
+
+.FrontProducts_list01-d4_c1 a {
+    color: #333;
+    text-decoration: none;
+}
+
+.FrontProducts_list01-d4_c1 a:hover {
+    text-decoration: underline;
+}
+
+/** 重点文字 **/
+
+.FrontProducts_list01-d4_c1 .focustext {
+    color: #f39800;
+    font-style: normal;
+}
+
+/** 列表样式 **/
+
+.FrontProducts_list01-d4_c1 .list {
+    background: url(/img/products/inq-bgtable.gif) 0 0 repeat-x;
+    /*表格上方背景条平铺*/
+    margin-bottom: 20px;
+}
+
+.FrontProducts_list01-d4_c1 .list th.first {
+    /*height:32px;
+	width:3px;
+	background:url(/img/products/inq-bgtitle.gif) 0 -84px no-repeat;表格左上方背景圆角*/
+    border-right: 0 solid;
+    height: 32px;
+    width: 0;
+}
+
+.FrontProducts_list01-d4_c1 .list th.last {
+    height: 32px;
+    background: url(/img/products/inq-bgtitle.gif) 100% 0 no-repeat;
+    /*表格右上方背景圆角*/
+}
+
+.FrontProducts_list01-d4_c1 .list th {
+    height: 32px;
+    line-height: 32px;
+    font-weight: normal;
+    color: #fff;
+    border-right: 1px solid #ccc;
+    text-align: center;
+    background: #0072a8;
+    /*background:url(/img/products/inq-bgtitle.gif) 100% -41px no-repeat;间隔线*/
+}
+
+.FrontProducts_list01-d4_c1 .list td {
+    border-bottom: 1px solid #9de3f9;
+    height: 40px;
+    text-align: center;
+    border-right: 1px solid #d7d7d7;
+}
+
+.FrontProducts_list01-d4_c1 .list .tr-list td {
+    border-bottom: 1px solid #d7d7d7;
+    border-right: 1px solid #d7d7d7;
+}
+
+.FrontProducts_list01-d4_c1 .list .hover td {
+    background: #efefef;
+}
+
+.FrontProducts_list01-d4_c1 table td.number {
+    text-align: center;
+}
+
+.FrontProducts_list01-d4_c1 table td.proname {
+    text-align: center;
+}
+
+.FrontProducts_list01-d4_c1 table td.pic {
+    text-align: center;
+}
+
+.FrontProducts_list01-d4_c1 table td.marker img {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+.FrontProducts_list01-d4_c1 table td.pic a {
+    border: 1px solid #CCC;
+    margin: 0 auto;
+    display: block;
+    width: 80px;
+    height: 60px;
+    padding: 0px;
+}
+
+.FrontProducts_list01-d4_c1 table td.pic a:hover {
+    border: 1px solid #F60;
+    background: #fff4ce;
+}
+
+.FrontProducts_list01-d4_c1 table td.pic img {
+    height: 52px;
+    margin: 4px;
+    width: 72px;
+}
+
+.FrontProducts_list01-d4_c1 table td.retail {
+    text-align: center;
+    word-wrap: break-word;
+}
+
+.FrontProducts_list01-d4_c1 table td.member {
+    text-align: center;
+    color: #FF6600;
+    word-wrap: break-word;
+}
+
+.FrontProducts_list01-d4_c1 .list td.price {
+    text-align: center;
+    color: #ff0000;
+    word-wrap: break-word;
+}
+
+.FrontProducts_list01-d4_c1 .list td.first {
+    border-left: 1px solid #ccc;
+    width: 0;
+    border-right: 0;
+}
+
+.FrontProducts_list01-d4_c1 .list td.last {
+    border-right: 1px solid #ccc;
+}
