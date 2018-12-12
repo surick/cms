@@ -29,52 +29,39 @@
 
 
 <div class="pageWidth" id="box_root">
-
-
-	<!--由中企动力科技集团股份有限公司苏州分公司技术部设计制作<br>
-如果你有任何意见或建议请联络dm-suzhou@300.cn -->
-	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-	<title>欣泰国际有限公司</title>
 	<!--[if lt IE 7]>
 	<style type="text/css">
 		#logo,#menuyapng { behavior: url(/img/my/iepngfix.htc) }
 	</style>
 	<![endif]-->
 	<script type="text/javascript">
+		function saveFeedback() {
+            console.log($("#Form").serializeArray());
+            $.ajax({
+                url: '/cms/feedback/saveFeedback',
+                type: 'POST',
+                data: $("#Form").serializeArray(),
+                success: function(res){
+                    if (res.success) {
+                        window.location.href = '/cn/feedback';
+                    } else {
+                        alert(res.message);
+					}
+                }
+            });
+        }
         //添加到收藏夹
         function AddFavorite(sURL, sTitle)
         {
-
-            try
-
-            {
-
+            try {
                 window.external.addFavorite(sURL, sTitle);
-
-            }
-
-            catch (e)
-
-            {
-
-                try
-
-                {
-
+            } catch (e) {
+                try {
                     window.sidebar.addPanel(sTitle, sURL, "");
-
-                }
-
-                catch (e)
-
-                {
-
+                } catch (e) {
                     alert("加入收藏失败，请使用Ctrl+D进行添加");
-
                 }
-
             }
-
         }
         function setHomepage(){　 // 设置首页
 
@@ -151,7 +138,7 @@
 	#menu li ul {list-style:none;padding:0;	margin:0 0 12px 0;}
 	#menu li ul li {font-size:12px; height:30px;	line-height:24px;position:relative;padding:0;margin:0;	float:none;	text-align:left;width:310px;}
 
-	#menu li ul li a{background:url("/images/my/daohang/subarrow.gif") no-repeat left 9px;padding-left:24px; color:#333 !important;}
+	#menu li ul li a{background:url("/img/my/daohang/subarrow.gif") no-repeat left 9px;padding-left:24px; color:#333 !important;}
 	#menu li ul li:hover {background:none;border:none;padding:0;margin:0; height:30px;}
 </style>
 	<!--<script type="text/javascript">
@@ -164,7 +151,7 @@ $(document).ready(function() {
   $(this).children() .children("a").css( {color: "#fff" ,background:"#7e7e7e"} );
 });
 });
-</script> -->        <div id="header02">         <div id="header">           <div id="logo">             <a href="/"></a>           </div>            <div id="menuya">             <div id="menu">
+</script> -->        <div id="header02">         <div id="header">           <div id="logo">             <a href="/cn"></a>           </div>            <div id="menuya">             <div id="menu">
 	<!--<ul id="hnav">
         <li id="home">
             <a href="/index.html">
@@ -202,10 +189,10 @@ $(document).ready(function() {
           <span class="en">Messages</span>
         </a>
       </li>
-    </ul>-->                <ul id="menu">                 <li id="home">                   <a class="drop" href="/">HOME</a>
+    </ul>-->                <ul id="menu">                 <li id="home">                   <a class="drop" href="/cn">首页</a>
 </li>
 	<li id="menu1">
-		<a class="drop" href="/">ABOUT</a>
+		<a class="drop" href="/cn/about">关于</a>
 		<!--<div class="dropdown_1column">
       <div class="col_1">
           <ul class="simple">
@@ -217,7 +204,7 @@ $(document).ready(function() {
 </div>        -->
 	</li>
 	<li id="menu2">
-		<a class="drop" href="/products_list">PRODUCTS</a>
+		<a class="drop" href="/cn/products_list">产品</a>
 		<!--<div class="dropdown_1column">
       <div class="col_1">
           <ul class="simple">
@@ -232,10 +219,10 @@ $(document).ready(function() {
 </div>        -->
 	</li>
 	<li id="menu3">
-		<a class="drop" href="/feedback">FEEDBACK</a>
+		<a class="drop" href="/cn/feedback">反馈</a>
 	</li>
 	<li id="menu4">
-		<a class="drop" href="/contact">CONTACT</a>
+		<a class="drop" href="/cn/contact">联系我们</a>
 	</li>
 </ul>
 </div>
@@ -398,14 +385,13 @@ $(document).ready(function() {
 
 					<!--内页左侧 开始-->
 
-
 					<div id="sub_left">
 
-						<div  class="sub_left_1"><h3><span class="titleCn">FEEDBACK</span><span class="titleEn"></span></h3>
+						<div  class="sub_left_1"><h3><span class="titleCn">反馈</span><span class="titleEn"></span></h3>
 
 							<div class="sub_category"><ul>
-								<li><a href="/feedback">Messages</a></li>
-								<li><a href="/feedback_list">View</a></li>
+								<li><a href="/cn/feedback">反馈</a></li>
+								<!--<li><a href="/cn/feedback_list">查看反馈</a></li>-->
 							</ul>
 							</div>
 							<div class="sub_btm"></div>
@@ -431,7 +417,7 @@ $(document).ready(function() {
 
 							<h2>
 
-								<span class="location">LOCAL:<a href="/">HOME</a> - FEEDBACK - <span id="sitemap">Messages</span></span><span id="sitemap">Messages</span>
+								<span class="location">位置:<a href="/cn">首页</a> - 反馈 - <span id="sitemap">查看反馈</span></span><span id="sitemap">反馈</span>
 
 							</h2>
 
@@ -444,8 +430,6 @@ $(document).ready(function() {
 							<div id="sub_right_content">
 
 								<!--内页右侧标题栏 开始 -->
-
-
 
 								<!--内页右侧标题栏 结束 -->
 
@@ -474,157 +458,135 @@ $(document).ready(function() {
 													<div class="borderContent"><div id="FrontMessages_customizeEmit01-004" class="FrontMessages_customizeEmit01-d1_c1"><div class="comptitle_42"><strong class="titlestyle_42">发表留言</strong></div><iframe name="myframe" style="display:none"></iframe>
 														<a name="messageLink" class="messageLink">&nbsp;</a>
 														<div class="FrontMessages_customizeEmit01-d1_c1">
-															<form id="FrontMessages_customizeEmit01-004_referForm" action="/" method="post" name="FrontMessages_customizeEmit01-004_referForm">
+															<form id="Form" action="/cms/feedback/saveFeedback" method="post" name="FrontMessages_customizeEmit01-004_referForm">
 																<table width="100%" border="0" cellspacing="0" cellpadding="0">
 																	<tr class="title">
-																		<th>Title:</th>
+																		<th>标题:</th>
 																		<td><input type="hidden" id="isDisplayMessagesTitle" value="0" />
 																			<div class="text-oper">
 																				<span class="fontnone">&nbsp;</span>
-																				<input class="input input-gray" type="text" id="messagesTitle" name="messagesTitle"
+																				<input class="input input-gray" type="text" id="messagesTitle" name="title"
 																					   value="" maxlength="255"/>
 																			</div>
-																			<div class="text-tip">
-            			  <span class="tip-default"  id="FrontMessages_customizeEmit01-004_infomessagesTitle">
-            				</span>
-																				<span class="tip-remind" style="display:none;"   id="FrontMessages_customizeEmit01-004_infomessagesTitle_black">
-                            </span>
-																				<span class="tip-error"  style="display:none;"    id="FrontMessages_customizeEmit01-004_nomessagesTitle">
-            			  	留言标题为必填项，请填写</span>
-																				<span class="tip-error"   style="display:none;"   id="FrontMessages_customizeEmit01-004_errmessagesTitle">
-            			Please enter the correct information</span>
-																			</div>
+																			<!--<div class="text-tip">-->
+            			  														<!--<span class="tip-default"  id="FrontMessages_customizeEmit01-004_infomessagesTitle"></span>-->
+																				<!--<span class="tip-remind" style="display:none;"   id="FrontMessages_customizeEmit01-004_infomessagesTitle_black"></span>-->
+																				<!--<span class="tip-error"  style="display:none;"    id="FrontMessages_customizeEmit01-004_nomessagesTitle">留言标题为必填项，请填写</span>-->
+																				<!--<span class="tip-error"   style="display:none;"   id="FrontMessages_customizeEmit01-004_errmessagesTitle">Please enter the correct information</span>-->
+																			<!--</div>-->
 																		</td>
 																	</tr>
 																	<tr class="info">
-																		<th valign="top">Content:</th>
-																		<td><input type="hidden" name="maxContent" id="maxContent" value="500" />
+																		<th valign="top">内容:</th>
+																		<td>
 																			<div class="text-oper"><span class="fontred">*</span>
 																				<textarea class="textarea input-gray"  name="content" ></textarea>
-																				<span class="tips">
-            					Entered characters:<span id="dynamicNum">0</span>
-            					Word<span class="tips">
-            					</span>
-            				</span>
 																			</div>
-																			<div class="text-tip">
-                          <span class="tip-default"   id="FrontMessages_customizeEmit01-004_infocontent">
-                		  	Less than or equal500Character</span>
-																				<span class="tip-remind"  style="display:none;"  id="FrontMessages_customizeEmit01-004_infocontent_black">
-                		  	Less than or equal500Character</span>
-																				<span class="tip-error"  style="display:none;"    id="FrontMessages_customizeEmit01-004_nocontent">
-                		  	Please enter message content</span>
-																				<span class="tip-error"   style="display:none;"   id="FrontMessages_customizeEmit01-004_errcontent">
-                			Message content can't exceed500Characters, please re-fill</span>
-																			</div></td>
+																			<!--<div class="text-tip">-->
+                          														<!--<span class="tip-default"   id="FrontMessages_customizeEmit01-004_infocontent">-->
+                		  															<!--Less than or equal500Character</span>-->
+																				<!--<span class="tip-remind"  style="display:none;"  id="FrontMessages_customizeEmit01-004_infocontent_black">-->
+																					<!--Less than or equal500Character</span>-->
+																				<!--<span class="tip-error"  style="display:none;"    id="FrontMessages_customizeEmit01-004_nocontent">-->
+                		  															<!--Please enter message content</span>-->
+																				<!--<span class="tip-error"   style="display:none;"   id="FrontMessages_customizeEmit01-004_errcontent">-->
+                																	<!--Message content can't exceed500Characters, please re-fill</span>-->
+																			<!--</div>-->
+																		</td>
 																	</tr>
 																	<tr class="tel2">
 																		<th>
-																			Contact:</th>
+																			联系方式:</th>
 																		<td><input type="hidden" id="isDisplayPhone" value="0" />
 																			<div class="text-oper">
 																				<span class="fontnone">&nbsp;</span>
-																				<input class="input input-gray" type="text" id="phone" name="phone"
+																				<input class="input input-gray" type="text" id="phone" name="contact"
 																					   value="" maxlength="32"/>
 
 																			</div>
-																			<div class="text-tip">
-                       <span class="tip-default"  id="FrontMessages_customizeEmit01-004_infophone">
-            			Less than or equal to 32 characters (including 0-9, -, (,), comma)</span>
-																				<span class="tip-remind"  style="display:none;"  id="FrontMessages_customizeEmit01-004_infophone_black">
-            			Less than or equal to 32 characters (including 0-9, -, (,), comma)</span>
-																				<span class="tip-error"   style="display:none;"    id="FrontMessages_customizeEmit01-004_errphone">
-            			Contact phone number, including 0-9, -, (,), comma, please fill out the contact telephone number is required, please fill out</span>
-																				<span class="tip-error"   style="display:none;"   id="FrontMessages_customizeEmit01-004_nophone">
-            			联系电话为必填项，请填写</span>
-																			</div></td>
+																			<!--<div class="text-tip">-->
+                       															<!--<span class="tip-default"  id="FrontMessages_customizeEmit01-004_infophone">-->
+            																		<!--Less than or equal to 32 characters (including 0-9, -, (,), comma)</span>-->
+																				<!--<span class="tip-remind"  style="display:none;"  id="FrontMessages_customizeEmit01-004_infophone_black">-->
+            																		<!--Less than or equal to 32 characters (including 0-9, -, (,), comma)</span>-->
+																				<!--<span class="tip-error"   style="display:none;"    id="FrontMessages_customizeEmit01-004_errphone">-->
+																					<!--Contact phone number, including 0-9, -, (,), comma, please fill out the contact telephone number is required, please fill out</span>-->
+																				<!--<span class="tip-error"   style="display:none;"   id="FrontMessages_customizeEmit01-004_nophone">-->
+            																		<!--联系电话为必填项，请填写</span>-->
+																			<!--</div>-->
+																		</td>
 																	</tr>
 																	<tr class="company">
 																		<th>
-																			Company Name:</th>
+																			公司名称:</th>
 																		<td><input type="hidden" id="isDisplayCorpName" value="0" />
 																			<div class="text-oper">
 																				<span class="fontnone">&nbsp;</span>
-																				<input class="input input-gray" type="text" id="corpName" name="corpName"
+																				<input class="input input-gray" type="text" id="corpName" name="companyName"
 																					   value="" maxlength="100"/>
 																			</div>
-																			<div class="text-tip">
-                       <span class="tip-default"  id="FrontMessages_customizeEmit01-004_infocorpName">
-            			  </span>
-																				<span class="tip-remind" style="display:none;"   id="FrontMessages_customizeEmit01-004_infocorpName_black">
-                          </span>
-																				<span class="tip-error"   style="display:none;"  id="FrontMessages_customizeEmit01-004_nocorpName">
-            				公司名称为必填项，请填写</span>
-																				<span class="tip-error"   style="display:none;"   id="FrontMessages_customizeEmit01-004_errcorpName">
-            			Please enter the correct information</span>
-																			</div>
+																			<!--<div class="text-tip">-->
+                       															<!--<span class="tip-default"  id="FrontMessages_customizeEmit01-004_infocorpName"></span>-->
+																				<!--<span class="tip-remind" style="display:none;"   id="FrontMessages_customizeEmit01-004_infocorpName_black"></span>-->
+																				<!--<span class="tip-error"   style="display:none;"  id="FrontMessages_customizeEmit01-004_nocorpName">-->
+            																		<!--公司名称为必填项，请填写</span>-->
+																				<!--<span class="tip-error"   style="display:none;"   id="FrontMessages_customizeEmit01-004_errcorpName">-->
+            																		<!--Please enter the correct information</span>-->
+																			<!--</div>-->
 																		</td>
 																	</tr>
 																	<tr class="area">
 																		<th>
-																			Area:</th>
+																			所在地区:</th>
 																		<td><input type="hidden" id="isDisplayArea" value="0" />
 																			<div class="text-oper">
 																				<span class="fontnone">&nbsp;</span>
 																				<input class="input input-gray" type="text" id="area" name="area"
 																					   value="" maxlength="200"/>
-
 																			</div>
-																			<div class="text-tip">
-                       <span class="tip-default"  id="FrontMessages_customizeEmit01-004_infoarea">
-            			  </span>
-																				<span class="tip-remind" style="display:none;"   id="FrontMessages_customizeEmit01-004_infoarea_black">
-                          </span>
-																				<span class="tip-error"   style="display:none;"   id="FrontMessages_customizeEmit01-004_noarea">
-            		  	 所在地区为必填项，请填写</span>
-																				<span class="tip-error"   style="display:none;"   id="FrontMessages_customizeEmit01-004_errarea">
-            			Please enter the correct information</span>
-																			</div></td>
+																			<!--<div class="text-tip">-->
+                       															<!--<span class="tip-default"  id="FrontMessages_customizeEmit01-004_infoarea"></span>-->
+																				<!--<span class="tip-remind" style="display:none;"   id="FrontMessages_customizeEmit01-004_infoarea_black"></span>-->
+																				<!--<span class="tip-error"   style="display:none;"   id="FrontMessages_customizeEmit01-004_noarea">-->
+            		  	 															<!--所在地区为必填项，请填写</span>-->
+																				<!--<span class="tip-error"   style="display:none;"   id="FrontMessages_customizeEmit01-004_errarea">-->
+																					<!--Please enter the correct information</span>-->
+																			<!--</div>-->
+																		</td>
 																	</tr>
 																	<tr class="address">
 																		<th>
-																			Address:</th>
+																			联系地址:</th>
 																		<td><input type="hidden" id="isDisplayAddress" value="0" />
 																			<div class="text-oper">
 																				<span class="fontnone">&nbsp;</span>
 																				<input class="input input-gray" type="text" id="address" name="address"
 																					   value="" maxlength="200"/>
 																			</div>
-																			<div class="text-tip">
-                       <span class="tip-default"  id="FrontMessages_customizeEmit01-004_infoaddress">
-            			  </span>
-																				<span class="tip-remind" style="display:none;"   id="FrontMessages_customizeEmit01-004_infoaddress_black">
-                          </span>
-																				<span class="tip-error"   style="display:none;"   id="FrontMessages_customizeEmit01-004_noaddress">
-            			联系地址为必填项，请填写</span>
-																				<span class="tip-error"   style="display:none;"   id="FrontMessages_customizeEmit01-004_erraddress">
-            			Please enter the correct information</span>
-																			</div></td>
+																			<!--<div class="text-tip">-->
+                       															<!--<span class="tip-default"  id="FrontMessages_customizeEmit01-004_infoaddress"></span>-->
+																				<!--<span class="tip-remind" style="display:none;"   id="FrontMessages_customizeEmit01-004_infoaddress_black"></span>-->
+																				<!--<span class="tip-error"   style="display:none;"   id="FrontMessages_customizeEmit01-004_noaddress">-->
+            																		<!--联系地址为必填项，请填写</span>-->
+																				<!--<span class="tip-error"   style="display:none;"   id="FrontMessages_customizeEmit01-004_erraddress">-->
+            																		<!--Please enter the correct information</span>-->
+																			<!--</div>-->
+																		</td>
 																	</tr>
 
 																	<tr class="button-position">
 																		<th>&nbsp;
-																			<input type="hidden" id="compId" name="compId" value="FrontMessages_customizeEmit01-004" />
-																			<input type="hidden" id="FrontMessages_customizeEmit01-004_newsId" name="FrontMessages_customizeEmit01-004_newsId" value="" />
-																			<input type="hidden" id="FrontMessages_customizeEmit01-004_productId" name="FrontMessages_customizeEmit01-004_productId" value="" />
-																			<input type="hidden" id="FrontMessages_customizeEmit01-004_downloadsId" name="FrontMessages_customizeEmit01-004_downloadsId" value="" />
-																			<input type="hidden" id="FrontMessages_customizeEmit01-004_onlineId" name="FrontMessages_customizeEmit01-004_onlineId" value="" />
-																			<input type="hidden" id="FrontMessages_customizeEmit01-004_membersarticleId" name="FrontMessages_customizeEmit01-004_membersarticleId" value="" />
 																		</th>
 																		<td>
 																			<span class="fontnone">&nbsp;</span>
-																			<input id="FrontMessages_customizeEmit01-004_submit" title="Make a comment"  class="btn btn-com-01" type="button" value="Make a comment"  />
+																			<input id="FrontMessages_customizeEmit01-004_submit" title="提交"  class="btn btn-com-01" type="button" value="提交" onclick="saveFeedback()"  />
 																		</td>
 																	</tr>
 																</table>
 															</form>
 														</div>
-														<script type="text/javascript">
-														</script>
 													</div>
-
 														<div class="clearBoth"></div>
-
 													</div>
 
 												</div>
@@ -640,8 +602,6 @@ $(document).ready(function() {
 										</div>
 
 										<!-- 装饰器样式结束 -->
-
-
 
 									</div>
 
@@ -661,10 +621,6 @@ $(document).ready(function() {
 
 <!--内页右侧 开始-->
 
-<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-
-<title>欣泰国际有限公司</title>
-
 <div id="footer_bg">
 
 	<!-- 插入组件的位置-->
@@ -678,40 +634,41 @@ $(document).ready(function() {
 				<div xmlns="" class="columnSpace" id="elem-FrontSpecifies_show01-14239672938481" name="说明页">
 
 					<div id="FrontSpecifies_show01-14239672938481" class="FrontSpecifies_show01-d1_c1"><table border="0" cellpadding="0" cellspacing="0" style="text-align: center; width: 600px; height: 159px; padding-top: 20px;">
+
 						<tbody>
 						<tr style="font-size: 14px; font-weight: bold;">
 							<td>
-								ABOUT US</td>
+								关于我们</td>
 							<td>
-								RPODUCTS</td>
+								产品</td>
 							<td>
-								FEEDBACK</td>
+								反馈</td>
 							<td>
-								CONTACT US</td>
+								联系我们</td>
 						</tr>
 						<tr>
 							<td>
-								<a href="/about">PROFILE</a></td>
+								<a href="/cn/about">公司资料</a></td>
 							<td>
-								<a href="/products_list">AUTO PARTS</a></td>
+								<a href="/cn/products_list">AUTO PARTS</a></td>
 							<td>
-								<a href="/feedback">MESSAGES</a></td>
+								<a href="/cn/feedback">反馈</a></td>
 							<td>
-								<a href="/contact">TRANMISSION PARTS</a></td>
+								<a href="/cn/contact">联系我们</a></td>
 						</tr>
 						<tr>
 							<td>
-								<a href="/culture">CULTURE</a></td>
+								<a href="/cn/culture">公司文化</a></td>
 							<td>
-								<a href="/products_list">TRANMISSION PARTS</a></td>
+								<a href="/cn/products_list">TRANMISSION PARTS</a></td>
 							<td>
-								<a href="/feedback_list">VIEW MSG</a></td>
+								<!--<a href="/cn/feedback_list">反馈列表</a>--></td>
 							<td>
-								<a href="/products_list">AUTO PARTS</a></td>
+								&nbsp;</td>
 						</tr>
 						<tr>
 							<td>
-								<a href="/honors">HONOR</a></td>
+								<a href="/cn/honors">公司荣誉</a></td>
 							<td>
 								&nbsp;</td>
 							<td>
@@ -721,7 +678,7 @@ $(document).ready(function() {
 						</tr>
 						<tr>
 							<td>
-								<a href="/technology">TECHNOLOGY</a></td>
+								<a href="/cn/technology">公司技术</a></td>
 							<td>
 								&nbsp;</td>
 							<td>
@@ -730,7 +687,8 @@ $(document).ready(function() {
 								&nbsp;</td>
 						</tr>
 						</tbody>
-					</table></div>
+					</table>
+					</div>
 
 				</div>
 
@@ -753,8 +711,6 @@ $(document).ready(function() {
 
 		</div>
 
-
-
 		<!-- 插入组件的位置-->
 
 	</div>
@@ -766,7 +722,7 @@ $(document).ready(function() {
 		<div xmlns="" class="columnSpace" id="elem-FrontSpecifies_show01-14239672938482" name="说明页">
 
 			<div id="FrontSpecifies_show01-14239672938482" class="FrontSpecifies_show01-d1_c1"><p style="text-align: center;">
-				Copyright &copy;&nbsp;&nbsp;<span>昆山智泉機械有限公司</span>&nbsp;&nbsp;<a class="hui" href="http://www.miitbeian.gov.cn/icp/publish/query/icpMemoInfo_login.action?id=19279298" style="color: blue; text-decoration: underline;"></a>&nbsp;&nbsp; <a href="http://www.300.CN">WWW.300.CN</a>&nbsp; <a href="http://www.tyclaser.com" target="_blank"><span style="color:#000000;">友</span></a><a href="http://www.lyjiguang.com" target="_blank"><span style="color:#000000;">情</span></a><span style="color:#000000;">链接</span></p></div>
+				Copyright &copy;&nbsp;&nbsp;<span>昆山智泉機械有限公司</span>&nbsp;&nbsp;<a class="hui" href="http://www.miitbeian.gov.cn/icp/publish/query/icpMemoInfo_login.action?id=19279298" style="color: blue; text-decoration: underline;"></a>&nbsp;&nbsp; <a href="http://"></a>&nbsp; <a href="http://www.tyclaser.com" target="_blank"><span style="color:#000000;">友</span></a><a href="http://www.lyjiguang.com" target="_blank"><span style="color:#000000;">情</span></a><span style="color:#000000;">链接</span></p></div>
 
 		</div>
 

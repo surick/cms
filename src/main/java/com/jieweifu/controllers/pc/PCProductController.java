@@ -14,4 +14,9 @@ public class PCProductController {
     public String listProducts() {
         return "products_list";
     }
+
+    @GetMapping("/cn/products_list")
+    public String cnListProducts() {
+        return "cn/products_list";
+    }
 }

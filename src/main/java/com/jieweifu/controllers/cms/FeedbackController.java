@@ -31,7 +31,7 @@ public class FeedbackController {
 
     @AdminAuthAnnotation(check = false)
     @PostMapping("saveFeedback")
-    public Result saveFeedback(@Valid @RequestBody Feedback feedback, Errors errors) {
+    public Result saveFeedback(@Valid Feedback feedback, Errors errors) {
         if (errors.hasErrors()) {
             return new Result().setError(ErrorUtil.getErrors(errors));
         }

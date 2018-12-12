@@ -14,82 +14,13 @@
     <script type="text/javascript" src="/js/common/jquery.js"></script>
     <script type="text/javascript" src="/js/lib.min.js"></script>
 </head>
-
 <body id="sub6">
-
     <div class="pageWidth" id="box_root">
-
-        <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-        <title>欣泰国际有限公司</title>
         <!--[if lt IE 7]>
         <style type="text/css">
             #logo,#menuyapng { behavior: url(/images/my/iepngfix.htc) }
         </style>
         <![endif]-->
-        <script type="text/javascript">
-            //添加到收藏夹   
-            function AddFavorite(sURL, sTitle) {
-
-                try
-
-                {
-
-                    window.external.addFavorite(sURL, sTitle);
-
-                } catch (e)
-
-                {
-
-                    try
-
-                    {
-
-                        window.sidebar.addPanel(sTitle, sURL, "");
-
-                    } catch (e)
-
-                    {
-
-                        alert("加入收藏失败，请使用Ctrl+D进行添加");
-
-                    }
-
-                }
-
-            }
-
-            function setHomepage() {　 // 设置首页  
-
-                if (document.all) {
-
-                    document.body.style.behavior = 'url(#default#homepage)';
-
-                    document.body.setHomePage('http://www.baidu.com');
-
-                } else if (window.sidebar) {
-
-                    if (window.netscape) {
-
-                        try {
-
-                            netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
-
-                        } catch (e) {
-
-
-                            alert("该操作被浏览器拒绝，如果想启用该功能，请在地址栏内输入 about:config,然后将项 signed.applets.codebase_principal_support 值该为true");
-
-                        }
-                    }
-
-                    var prefs = Components.classes['@mozilla.org/preferences-service;1'].getService(Components.interfaces.nsIPrefBranch);
-
-                    prefs.setCharPref('browser.startup.homepage', 'http://www.baidu.com');
-
-                }
-
-            }
-        </script>
         <link _cke_saved_href="/img/favicon.ico" href="/img/favicon.ico" rel="shortcut icon" />
         <style type="text/css">
             #index #menu li#home a {
@@ -259,110 +190,23 @@
                 height: 30px;
             }
         </style>
-        <!--<script type="text/javascript">
-$(document).ready(function() {
-	$("ul#hnav li").hover(function() { //Hover over event on list item
-	$(this).find("div.ljcyakkk_one").show(); //Show the subnav
-	$(this).children() .children("a").css( {color: "#fff" ,background:"#d30000"} );
-} , function() { //on hover out...
-	$(this).find("div.ljcyakkk_one").hide(); //Hide the subnav
-	$(this).children() .children("a").css( {color: "#fff" ,background:"#7e7e7e"} );
-});
-});
-</script> -->
         <div id="header02">
             <div id="header">
-                <div id="logo"> <a href="/"></a> </div>
+                <div id="logo">
+                    <a href="/cn"></a>
+                </div>
                 <div id="menuya">
                     <div id="menu">
-                        <!--<ul id="hnav">               
-                  <li id="home">               
-                      <a href="/index.html">             
-                            <span class="cn">首页</span>  
-                   <span class="en">Home</span> 
-                  </a> 
-                </li>  
-                <li id="menu1"> 
-                  <a href="/about.html"> 
-                    <span class="cn">关于我们</span>  
-                    <span class="en">About us</span> 
-                  </a> 
-                </li>  
-                <li id="menu2"> 
-                  <a href="/news_list.html"> 
-                    <span class="cn">产品介绍</span>  
-                    <span class="en">News Center</span> 
-                  </a> 
-                </li>  
-                <li id="menu3"> 
-                  <a href="/products_list.html"> 
-                    <span class="cn">研发与服务</span>  
-                    <span class="en">products</span> 
-                  </a> 
-                </li>  
-                <li id="menu4"> 
-                  <a href="/about2.html"> 
-                    <span class="cn">客户需求</span>  
-                    <span class="en">Technical</span> 
-                  </a> 
-                </li>  
-                <li id="menu5"> 
-                  <a href="/messages_sub.html"> 
-                    <span class="cn">加入我们</span>  
-                    <span class="en">Messages</span> 
-                  </a> 
-                </li> 
-              </ul>-->
                         <ul id="menu">
-                            <li id="home"> <a class="drop" href="/">HOME</a>
-                            </li>
-                            <li id="menu1">
-                                <a class="drop" href="/about">ABOUT</a>
-                                <!--<div class="dropdown_1column">        
-                <div class="col_1">                
-                    <ul class="simple">
-                        <li><a href="/about/&i=20&comContentId=20.html">Team Style</a></li>
-                        <li><a href="/news_list_1/&newsCategoryId=3.html">SUNCHEM News</a></li>
-                        <li><a href="/news_list_1/&newsCategoryId=2.html">Industry News</a></li>
-                    </ul>                        
-                </div>                
-		</div>        -->
-                            </li>
-                            <li id="menu2">
-                                <a class="drop" href="/products_list">PRODUCTS</a>
-                                <!--<div class="dropdown_1column">        
-                <div class="col_1">                
-                    <ul class="simple">
-                        <li><a href="/products_list.html">Raney metal catalyst</a></li>
-<li><a href="/products_list_a.html">Basic metal catalyst</a></li>
-                        <li><a href="/products_list_b.html">Precious metal catalyst carrier</a></li>
-                        <li><a href="/about_q/&i=18&comContentId=18.html">Special Purpose catalyst</a></li>
-                        <li><a href="/about_q/&i=13&comContentId=13.html">Technology Solutions</a></li>
-                        <li><a href="/about_q/&i=14&comContentId=14.html">Spent catalyst recycling and substitution</a></li>
-                    </ul>                        
-                </div>                
-		</div>        -->
-                            </li>
-                            <li id="menu3">
-                                <a class="drop" href="/feedback">FEEDBACK</a>
-                            </li>
-                            <li id="menu4">
-                                <a class="drop" href="/contact">CONTACT</a>
-                            </li>
+                            <li id="home"> <a class="drop" href="/cn">首页</a></li>
+                            <li id="menu1"><a class="drop" href="/cn/about">关于</a></li>
+                            <li id="menu2"><a class="drop" href="/cn/products_list">产品</a></li>
+                            <li id="menu3"><a class="drop" href="/cn/feedback">反馈</a></li>
+                            <li id="menu4"><a class="drop" href="/cn/contact">联系我们</a></li>
                         </ul>
                     </div>
                 </div>
                 <div id="header1">
-                    <!--<div id="ban"> 
-              <ul> 
-                <li> 
-                  <a class="Hchina" href="http://www.sun-chem.com" target="_blank"></a> 
-                </li>  
-                <li> 
-                  <a class="Henglish" href="#"></a> 
-                </li> 
-              </ul> 
-            </div>  -->
                     <div class="spacesearch" id="soso">
                         <div id="box_413546135">
                             <div xmlns="" class="columnSpace" id="elem-FrontProducts_generalSearch01-13759478123710" name="商品搜索">
@@ -386,11 +230,6 @@ $(document).ready(function() {
 	                                    <input type="submit" class="btn btn-com-03" value=""/>
 		                                </span>
                                     </form>
-                                    <script type="text/javascript">
-                                        //<![CDATA[
-                                        FrontProducts_generalSearch01.keyout('FrontProducts_generalSearch01-13759478123710', 'Please enter the key');
-                                        //]]>
-                                    </script>
                                 </div>
                             </div>
                         </div>
@@ -444,12 +283,10 @@ function position_fixed(el, eltop, elleft){
 
                      el.style.left = (document.documentElement.scrollLeft + elleft)+"px";  
 
-       }  
-
+       }
        else el.style.position = "fixed";  
 
 }
-
        position_fixed(document.getElementById("ie6-warning"),0, 0);
 
 </script>
@@ -494,16 +331,15 @@ function position_fixed(el, eltop, elleft){
                         <div id="sub_wrappng"></div>
                         <div id="sub_wrapya">
                             <!--内页左侧 开始-->
-
                             <div id="sub_left">
 
                                 <div class="sub_left_1">
-                                    <h3><span class="titleCn">FEEDBACK</span><span class="titleEn"></span></h3>
+                                    <h3><span class="titleCn">反馈</span><span class="titleEn"></span></h3>
 
                                     <div class="sub_category">
                                         <ul>
-                                            <li><a href="/feedback">Messages</a></li>
-                                            <li><a href="/feedback_list">View</a></li>
+                                            <li><a href="/cn/feedback">反馈</a></li>
+                                            <li><a href="/cn/feedback_list">查看反馈</a></li>
                                         </ul>
                                     </div>
                                     <div class="sub_btm"></div>
@@ -530,7 +366,7 @@ function position_fixed(el, eltop, elleft){
                             <div id="sub_right">
                                 <div id="sub_right_title">
                                     <h2>
-                                        <span class="location">LOCAL：<a href="/">HOME</a> - FEEDBACK - <span id="sitemap">View</span></span><span id="sitemap">View</span>
+                                        <span class="location">位置：<a href="/cn">首页</a> - 反馈 - <span id="sitemap">查看反馈</span></span><span id="sitemap">查看反馈</span>
                                     </h2>
                                 </div>
                                 <div id="right_content">
@@ -571,14 +407,12 @@ function position_fixed(el, eltop, elleft){
                                                                     <div class="center">
                                                                         <ul class="title">
                                                                             <li class="person">
-                                                                                <span>
-									name:</span>
-                                                                                <em class="foucetext">
-										Anonymity</em>
+                                                                                <span>姓名:</span>
+                                                                                <em class="foucetext">Anonymity</em>
                                                                             </li>
                                                                             <li class="tel">
-                                                                                <span>
-									Contact:</span> 0512-65830037
+                                                                                <span>联系方式:</span>
+                                                                                0512-65830037
                                                                             </li>
                                                                             <li class="fixed">
                                                                                 <ul>
@@ -587,28 +421,27 @@ function position_fixed(el, eltop, elleft){
                                                                         </ul>
                                                                         <ul class="list">
                                                                             <li class="li-title">
-                                                                                <span>Title:</span> sds
+                                                                                <span>标题:</span>
+                                                                                sds
                                                                             </li>
                                                                             <li class="li-con">
                                                                                 <div class="pic">
-
                                                                                     &nbsp;
                                                                                 </div>
                                                                                 <div class="info">
-                                                                                    <span>Content:</span> ccxc
+                                                                                    <span>内容:</span>
+                                                                                    ccxc
                                                                                 </div>
                                                                             </li>
                                                                         </ul>
                                                                         <ul class="title">
                                                                             <li class="person">
-                                                                                <span>
-									name:</span>
-                                                                                <em class="foucetext">
-										Anonymity</em>
+                                                                                <span>姓名:</span>
+                                                                                <em class="foucetext">Anonymity</em>
                                                                             </li>
                                                                             <li class="tel">
-                                                                                <span>
-									Contact:</span> GSdEKO1A
+                                                                                <span>联系方式:</span>
+                                                                                GSdEKO1A
                                                                             </li>
                                                                             <li class="fixed">
                                                                                 <ul>
@@ -617,27 +450,26 @@ function position_fixed(el, eltop, elleft){
                                                                         </ul>
                                                                         <ul class="list">
                                                                             <li class="li-title">
-                                                                                <span>Title:</span> It&#039;s good to get a f</li>
+                                                                                <span>标题:</span>
+                                                                                It&#039;s good to get a f
+                                                                            </li>
                                                                             <li class="li-con">
                                                                                 <div class="pic">
-
                                                                                     &nbsp;
                                                                                 </div>
                                                                                 <div class="info">
-                                                                                    <span>Content:</span> It's&nbsp;good&nbsp;to&nbsp;get&nbsp;a&nbsp;fresh&nbsp;way&nbsp;of&nbsp;looikng&nbsp;at&nbsp;it.
+                                                                                    <span>内容:</span>
+                                                                                    It's&nbsp;good&nbsp;to&nbsp;get&nbsp;a&nbsp;fresh&nbsp;way&nbsp;of&nbsp;looikng&nbsp;at&nbsp;it.
                                                                                 </div>
                                                                             </li>
                                                                         </ul>
                                                                         <ul class="title">
                                                                             <li class="person">
-                                                                                <span>
-									name:</span>
-                                                                                <em class="foucetext">
-										Anonymity</em>
+                                                                                <span>name:</span>
+                                                                                <em class="foucetext">Anonymity</em>
                                                                             </li>
                                                                             <li class="tel">
-                                                                                <span>
-									Contact:</span>
+                                                                                <span>Contact:</span>
                                                                             </li>
                                                                             <li class="fixed">
                                                                                 <ul>
@@ -650,7 +482,6 @@ function position_fixed(el, eltop, elleft){
                                                                             </li>
                                                                             <li class="li-con">
                                                                                 <div class="pic">
-
                                                                                     &nbsp;
                                                                                 </div>
                                                                                 <div class="info">
@@ -660,14 +491,11 @@ function position_fixed(el, eltop, elleft){
                                                                         </ul>
                                                                         <ul class="title">
                                                                             <li class="person">
-                                                                                <span>
-									name:</span>
-                                                                                <em class="foucetext">
-										Anonymity</em>
+                                                                                <span>name:</span>
+                                                                                <em class="foucetext">Anonymity</em>
                                                                             </li>
                                                                             <li class="tel">
-                                                                                <span>
-									Contact:</span> 0512-84589655
+                                                                                <span>Contact:</span> 0512-84589655
                                                                             </li>
                                                                             <li class="fixed">
                                                                                 <ul>
@@ -683,20 +511,18 @@ function position_fixed(el, eltop, elleft){
                                                                                     &nbsp;
                                                                                 </div>
                                                                                 <div class="info">
-                                                                                    <span>Content:</span> good&nbsp;web
+                                                                                    <span>Content:</span>
+                                                                                    good&nbsp;web
                                                                                 </div>
                                                                             </li>
                                                                         </ul>
                                                                         <ul class="title">
                                                                             <li class="person">
-                                                                                <span>
-									name:</span>
-                                                                                <em class="foucetext">
-										Anonymity</em>
+                                                                                <span>name:</span>
+                                                                                <em class="foucetext">Anonymity</em>
                                                                             </li>
                                                                             <li class="tel">
-                                                                                <span>
-									Contact:</span>
+                                                                                <span>Contact:</span>
                                                                             </li>
                                                                             <li class="fixed">
                                                                                 <ul>
@@ -709,11 +535,11 @@ function position_fixed(el, eltop, elleft){
                                                                             </li>
                                                                             <li class="li-con">
                                                                                 <div class="pic">
-
                                                                                     &nbsp;
                                                                                 </div>
                                                                                 <div class="info">
-                                                                                    <span>Content:</span> DSF
+                                                                                    <span>Content:</span>
+                                                                                    DSF
                                                                                 </div>
                                                                             </li>
                                                                         </ul>
@@ -721,11 +547,9 @@ function position_fixed(el, eltop, elleft){
                                                                     <div class="skip-page">
                                                                         <div class="pageJump">
                                                                             <div class="totalcount">current show 1-5 record total 5 record </div>
-                                                                            <div class="jump">jump<input id="pageNoId0e80ac6618e54c3e803f6398c87c8767" type="text" class="textInput" value="1" maxlength="4" />page<input type="button" class="pgbtn" value="GO" onclick="jumpbutton_0e80ac6618e54c3e803f6398c87c8767();"
-                                                                                /></div>
+                                                                            <div class="jump">jump<input id="pageNoId0e80ac6618e54c3e803f6398c87c8767" type="text" class="textInput" value="1" maxlength="4" />page<input type="button" class="pgbtn" value="GO" onclick="jumpbutton_0e80ac6618e54c3e803f6398c87c8767();"/></div>
                                                                             <div class="number"><span class="disabled">first</span><span class="disabled">previous</span><span class="current">1</span><span class="disabled">next</span><span class="disabled">last</span></div>
-                                                                            <div
-                                                                                class="total">current 1 page/total 1 page </div>
+                                                                            <div class="total">current 1 page/total 1 page</div>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -748,11 +572,8 @@ function position_fixed(el, eltop, elleft){
 
                                             <!-- 装饰器样式结束 -->
 
-
-
-
                                         </div>
-                                        <div id="btn_message"><a href="/feedback"></a></div>
+                                        <div id="btn_message"><a href="/cn/feedback"></a></div>
                                     </div>
                                     <!-- 插入组件的位置-->
                                     <div class="btm"></div>
@@ -771,10 +592,6 @@ function position_fixed(el, eltop, elleft){
     <!--内页左侧 结束-->
     <!--内页右侧 开始-->
 
-    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-
-    <title>欣泰国际有限公司</title>
-
     <div id="footer_bg">
 
         <!-- 插入组件的位置-->
@@ -789,57 +606,59 @@ function position_fixed(el, eltop, elleft){
 
                         <div id="FrontSpecifies_show01-14239672938481" class="FrontSpecifies_show01-d1_c1">
                             <table border="0" cellpadding="0" cellspacing="0" style="text-align: center; width: 600px; height: 159px; padding-top: 20px;">
+
                                 <tbody>
-                                    <tr style="font-size: 14px; font-weight: bold;">
-                                        <td>
-                                            ABOUT US</td>
-                                        <td>
-                                            RPODUCTS</td>
-                                        <td>
-                                            FEEDBACK</td>
-                                        <td>
-                                            CONTACT US</td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <a href="/about">PROFILE</a></td>
-                                        <td>
-                                            <a href="/products_list">AUTO PARTS</a></td>
-                                        <td>
-                                            <a href="/feedback">MESSAGES</a></td>
-                                        <td>
-                                            <a href="/contact">TRANMISSION PARTS</a></td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <a href="/culture">CULTURE</a></td>
-                                        <td>
-                                            <a href="/products_list">TRANMISSION PARTS</a></td>
-                                        <td>
-                                            <a href="/feedback_list">VIEW MSG</a></td>
-                                        <td>
-                                            <a href="/products_list">AUTO PARTS</a></td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <a href="/honors">HONOR</a></td>
-                                        <td>
-                                            &nbsp;</td>
-                                        <td>
-                                            &nbsp;</td>
-                                        <td>
-                                            &nbsp;</td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <a href="/technology">TECHNOLOGY</a></td>
-                                        <td>
-                                            &nbsp;</td>
-                                        <td>
-                                            &nbsp;</td>
-                                        <td>
-                                            &nbsp;</td>
-                                    </tr>
+                                <tr style="font-size: 14px; font-weight: bold;">
+                                    <td>
+                                        关于我们</td>
+                                    <td>
+                                        产品</td>
+                                    <td>
+                                        反馈</td>
+                                    <td>
+                                        联系我们</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="/cn/about">公司资料</a></td>
+                                    <td>
+                                        <a href="/cn/products_list">AUTO PARTS</a></td>
+                                    <td>
+                                        <a href="/cn/feedback">反馈</a></td>
+                                    <td>
+                                        <a href="/cn/contact">联系我们</a></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="/cn/culture">公司文化</a></td>
+                                    <td>
+                                        <a href="/cn/products_list">TRANMISSION PARTS</a></td>
+                                    <td>
+                                        <!--<a href="/cn/feedback_list">反馈列表</a>-->
+                                    </td>
+                                    <td>
+                                        &nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="/cn/honors">公司荣誉</a></td>
+                                    <td>
+                                        &nbsp;</td>
+                                    <td>
+                                        &nbsp;</td>
+                                    <td>
+                                        &nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="/cn/technology">公司技术</a></td>
+                                    <td>
+                                        &nbsp;</td>
+                                    <td>
+                                        &nbsp;</td>
+                                    <td>
+                                        &nbsp;</td>
+                                </tr>
                                 </tbody>
                             </table>
                         </div>
@@ -866,9 +685,6 @@ function position_fixed(el, eltop, elleft){
                 <div class="clearBoth"></div>
 
             </div>
-
-
-
             <!-- 插入组件的位置-->
 
         </div>
@@ -882,17 +698,14 @@ function position_fixed(el, eltop, elleft){
                 <div id="FrontSpecifies_show01-14239672938482" class="FrontSpecifies_show01-d1_c1">
                     <p style="text-align: center;">
                         Copyright &copy;&nbsp;&nbsp;<span>昆山智泉機械有限公司</span>&nbsp;&nbsp;<a class="hui" href="http://www.miitbeian.gov.cn/icp/publish/query/icpMemoInfo_login.action?id=19279298" style="color: blue; text-decoration: underline;"></a>&nbsp;&nbsp;
-                        <a href="http://www.300.CN">WWW.300.CN</a>&nbsp; <a href="http://www.tyclaser.com" target="_blank"><span style="color:#000000;">友</span></a><a href="http://www.lyjiguang.com" target="_blank"><span style="color:#000000;">情</span></a>
+                        <a href="http://"></a>&nbsp; <a href="http://www.tyclaser.com" target="_blank"><span style="color:#000000;">友</span></a><a href="http://www.lyjiguang.com" target="_blank"><span style="color:#000000;">情</span></a>
                         <span
                             style="color:#000000;">链接</span>
                     </p>
                 </div>
 
             </div>
-
-
         </div>
-
 
         <div id="box_040ffkxf">
             <div id="elem-FrontPublic_trust01-001" name="可信网站" class="columnSpace">
