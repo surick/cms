@@ -6,6 +6,10 @@ import com.jieweifu.models.cms.Products;
 import com.jieweifu.services.cms.ProductTypeService;
 import com.jieweifu.services.cms.ProductsService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageImpl;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -73,6 +77,22 @@ public class ProductsServiceImpl implements ProductsService {
                 .where("deleted = 0")
                 .limit(pageIndex, pageSize)
                 .queryForList(Products.class);
+    }
+
+    @Override
+    public Page<Products> findPaginated(Pageable pageable) {
+        int pageSize = pageable.getPageSize();
+        int currentPage = pageable.getPageNumber();
+        List<Products> list = db.select()
+                .from(Products.class)
+                .where("deleted = 0")
+                .limit(currentPage, pageSize)
+                .queryForList(Products.class);
+
+        Page<Products> productPage
+                = new PageImpl<Products>(list, pageable, list.size());
+
+        return productPage;
     }
 
     @Override

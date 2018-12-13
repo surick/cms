@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
     <title>Timing chain|valve tappet|oil pump|timing kit|water pump 【昆山智泉機械有限公司】</title>
@@ -25,7 +25,7 @@
     <link href="/img/my/lightbox/jquery.lightbox-0.5.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="/js/common/jquery.js"></script>
     <script type="text/javascript" src="/js/lib.min.js"></script>
-
+    <link rel="stylesheet" href="/css/bootstrap.min.css"/>
     <script type="text/javascript" src="/js/product/list.js"></script>
     <script language="javascript" src="/img/my/lightbox/jquery.lightbox-0.5.js" type="text/javascript"></script>
     <script language="javascript" src="/js/product/list2.js"></script>
@@ -36,7 +36,7 @@
     <div class="pageWidth" id="box0_root">
         <!--[if lt IE 7]>
         <style type="text/css">
-            #logo,#menuyapng { behavior: url(/images/my/iepngfix.htc) }
+            #logo,#menuyapng { behavior: url(/img/my/iepngfix.htc) }
         </style>
         <![endif]-->
         <link _cke_saved_href="/img/favicon.ico" href="/img/favicon.ico" rel="shortcut icon" />
@@ -126,7 +126,7 @@
 
             #menu li .drop {
                 padding-right: 0px;
-                /*background:url("/images/my/daohang/menuarrow.gif") no-repeat right 3px;*/
+                /*background:url("/img/my/daohang/menuarrow.gif") no-repeat right 3px;*/
             }
 
             #menu li:hover .drop {
@@ -252,11 +252,6 @@
 	                                    <input type="submit" class="btn btn-com-03" value=""/>
 		                                </span>
                                     </form>
-                                    <script type="text/javascript">
-                                        //<![CDATA[
-                                        FrontProducts_generalSearch01.keyout('FrontProducts_generalSearch01-13759478123710', 'Please enter the key');
-                                        //]]>
-                                    </script>
                                 </div>
                             </div>
                         </div>
@@ -369,7 +364,7 @@
                                                             openOnRight: true,
                                                             menuSelector: ".FrontProductsCategory_show01-d2-menuContainer",
                                                             iconPath: "/img/products/",
-                                                            hasImages: true,
+                                                            hasimg: true,
                                                             fadeInTime: 200,
                                                             fadeOutTime: 200,
                                                             adjustLeft: 0,
@@ -509,30 +504,15 @@
                                                     <script type="text/javascript" src="/js/products/FrontProducts_list01.js"></script>
                                                     <script type="text/javascript" src="/js/i18n/FrontProducts_list01.js"></script>
                                                     <div id="FrontProducts_list01-004fs" class="FrontProducts_list01-d1_c1">
-                                                        <form id="FrontProducts_list01-004fs_Form" name="FrontProducts_list01-004fs_Form" action="/" method="post">
-                                                            <input type="hidden" name="action_page" value="/products_list" />
-                                                            <input type="hidden" name="pmcId" value="36" />
-                                                            <input type="hidden" name="pmscId" value="" />
-                                                            <input type="hidden" name="keyword" value="" />
-                                                            <input type="hidden" name="propertyId" value="" />
-                                                            <input type="hidden" name="searchType" value="" />
-                                                            <input type="hidden" name="brandId" value="" />
-                                                            <input type="hidden" name="beginValue" value="" />
-                                                            <input type="hidden" name="endValue" value="" />
-                                                            <input type="hidden" name="orderby" value="3" />
-                                                            <input type="hidden" name="spType" value="" />
-                                                            <input type="hidden" name="pageNo_FrontProducts_list01-004fs" value="1" />
-                                                            <input type="hidden" name="pageSize_FrontProducts_list01-004fs" value="6" />
-                                                        </form>
                                                         <div class="type">
                                                             <span class="sort"></span>
                                                         </div>
                                                         <ul class="mainul productlist-02">
-                                                            <li class="content column-num3">
+                                                            <li th:each="product : ${page.content}" class="content column-num3">
                                                                 <div class="pic-module">
                                                                     <div class="pic">
-                                                                        <a href="/products_detail/productId=411.html" title="VW 026  115  105B" target="_self">
-                                                                            <img src= "/imageRepository/2a19202f-9426-4847-a017-320a4c600561.jpg" id= "FrontProducts_list01-004fs_411" alt= "" title= "VW 026  115  105B" onerror= "this.src='/img/common/noimage.jpg'" />
+                                                                        <a href="/" th:title="${product.name}" target="_self">
+                                                                            <img th:src= "@{'http://127.0.0.1/' + ${product.imgUrl}}" id= "FrontProducts_list01-004fs_411" alt= "" th:title= "${product.name}" />
                                                                         </a>
                                                                     </div>
                                                                 </div>
@@ -541,138 +521,43 @@
                                                                         <li class="code">
                                                                             <h1>
                                                                                 <span>Name: </span>
-                                                                                <strong><a href="/products_detail/productId=411.html" title="VW 026  115  105B" target="_self">VW 026  115  105B</a></strong>
+                                                                                <strong><a href="/" th:title="${product.name}" target="_self" th:text="${product.name}"></a></strong>
                                                                             </h1>
                                                                         </li>
                                                                     </ul>
                                                                     <p class="buttonP">
                                                                     </p>
-                                                                </div>
-                                                            </li>
-                                                            <li class="content column-num3">
-                                                                <div class="pic-module">
-                                                                    <div class="pic">
-                                                                        <a href="/products_detail/productId=102.html" title="DAEWOO 9 6 3 5 0 1 5 9/ 9 6 5 4 1 5 0 5" target="_self">
-                                                                            <img src= "/imageRepository/2ba0585f-7dfe-4fee-99f4-0100691a11e5.jpg" id= "FrontProducts_list01-004fs_102" alt= "" title= "DAEWOO 9 6 3 5 0 1 5 9/ 9 6 5 4 1 5 0 5" onerror= "this.src='/img/common/noimage.jpg'" />
-                                                                        </a>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="pro-module">
-                                                                    <ul class="basic">
-                                                                        <li class="code">
-                                                                            <h1>
-                                                                                <span>Name: </span>
-                                                                                <strong><a href="/products_detail/productId=102.html" title="DAEWOO 9 6 3 5 0 1 5 9/ 9 6 5 4 1 5 0 5" target="_self">DAEWOO 9 6 3 5 0 1 5 9/ 9 6 5 4 1 5 0 5</a></strong>
-                                                                            </h1>
-                                                                        </li>
-                                                                    </ul>
-                                                                    <p class="buttonP">
-                                                                    </p>
-                                                                </div>
-                                                            </li>
-                                                            <li class="content column-num3">
-                                                                <div class="pic-module">
-                                                                    <div class="pic">
-                                                                        <a href="/products_detail/productId=350.html" title="021.115.105B" target="_self">
-                                                                            <img src= "/imageRepository/10f4dda5-ec4d-43d3-b1db-e908df342d3e.jpg" id= "FrontProducts_list01-004fs_350" alt= "" title= "021.115.105B" onerror= "this.src='/img/common/noimage.jpg'" />
-                                                                        </a>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="pro-module">
-                                                                    <ul class="basic">
-                                                                        <li class="code">
-                                                                            <h1>
-                                                                                <span>Name: </span>
-                                                                                <strong><a href="/products_detail/productId=350.html" title="021.115.105B" target="_self">021.115.105B</a></strong>
-                                                                            </h1>
-                                                                        </li>
-                                                                    </ul>
-                                                                    <p class="buttonP">
-                                                                    </p>
-                                                                </div>
-                                                            </li>
-                                                            <li class="clearBoth"></li>
-                                                            <li class="content column-num3">
-                                                                <div class="pic-module">
-                                                                    <div class="pic">
-                                                                        <a href="/products_detail/productId=468.html" title="2108" target="_self">
-                                                                            <img src= "/imageRepository/014dfec9-c021-4923-aad2-e21a125d51f1.jpg" id= "FrontProducts_list01-004fs_468" alt= "" title= "2108" onerror= "this.src='/img/common/noimage.jpg'" />
-                                                                        </a>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="pro-module">
-                                                                    <ul class="basic">
-                                                                        <li class="code">
-                                                                            <h1>
-                                                                                <span>Name: </span>
-                                                                                <strong><a href="/products_detail/productId=468.html" title="2108" target="_self">2108</a></strong>
-                                                                            </h1>
-                                                                        </li>
-                                                                    </ul>
-                                                                    <p class="buttonP">
-                                                                    </p>
-                                                                </div>
-                                                            </li>
-                                                            <li class="content column-num3">
-                                                                <div class="pic-module">
-                                                                    <div class="pic">
-                                                                        <a href="/products_detail/productId=336.html" title="2109" target="_self">
-                                                                            <img src= "/imageRepository/bf38a762-b3d6-4817-8b9c-18f2b02710f7.jpg" id= "FrontProducts_list01-004fs_336" alt= "" title= "2109" onerror= "this.src='/img/common/noimage.jpg'" />
-                                                                        </a>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="pro-module">
-                                                                    <ul class="basic">
-                                                                        <li class="code">
-                                                                            <h1>
-                                                                                <span>Name: </span>
-                                                                                <strong><a href="/products_detail/productId=336.html" title="2109" target="_self">2109</a></strong>
-                                                                            </h1>
-                                                                        </li>
-                                                                    </ul>
-                                                                    <p class="buttonP"></p>
-                                                                </div>
-                                                            </li>
-                                                            <li class="content column-num3">
-                                                                <div class="pic-module">
-                                                                    <div class="pic">
-                                                                        <a href="/products_detail/productId=72.html" title="2110" target="_self">
-                                                                            <img src= "/imageRepository/330d221e-54b8-4bbf-92b1-c11636e24427.jpg" id= "FrontProducts_list01-004fs_72" alt= "" title= "2110" onerror= "this.src='/img/common/noimage.jpg'" />
-                                                                        </a>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="pro-module">
-                                                                    <ul class="basic">
-                                                                        <li class="code">
-                                                                            <h1>
-                                                                                <span>Name: </span>
-                                                                                <strong><a href="/products_detail/productId=72.html" title="2110" target="_self">2110</a></strong>
-                                                                            </h1>
-                                                                        </li>
-                                                                    </ul>
-                                                                    <p class="buttonP"></p>
                                                                 </div>
                                                             </li>
                                                             <li class="clearBoth"></li>
                                                         </ul>
-                                                        <div class="skip-pages">
-                                                            <div class="bottom">
-                                                                <div class="pageJump">
-                                                                    <div class="totalcount">current show 1-6 record total 572 record </div>
-                                                                    <div class="number">
-                                                                        <span class="disabled">first</span>
-                                                                        <span class="disabled">previous</span>
-                                                                        <span class="current">1</span>
-                                                                        <a href="#" onclick="return (2,6);">2</a>
-                                                                        <a href="#" onclick="return (3,6);">3</a>
-                                                                        <span class="omit">...</span>
-                                                                        <a href="#" onclick="return (95,6);">95</a>
-                                                                        <a href="#" onclick="return (96,6);">96</a>
-                                                                        <a href="#" onclick="return (2,6);">next</a>
-                                                                        <a href="#" onclick="return (96,6);">last</a>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
+                                                        <!--<div th:if="${page.totalPages > 0}" class="pagination"-->
+                                                        <!--th:each="pageNumber : ${pageNumbers}">-->
+                                                        <!--<a th:href="@{/cn/products_list(size=${page.size}, page=${pageNumber})}"-->
+                                                        <!--th:text="${pageNumber}"-->
+                                                        <!--th:class="${pageNumber==page.number + 1} ? active"></a>-->
+                                                        <!--</div>-->
+                                                        <div style="float: right">
+                                                            <ul class="pagination">
+                                                                <li th:class="${page.number eq 0} ? 'disabled' : ''">
+                                                                    <a th:if="${not page.first}" th:href="@{${'/products_list'}(page=${page.number-1},size=${page.size})}">Previous</a>
+                                                                    <a th:if="${page.first}" href="javascript:void(0);">Previous</a>
+                                                                </li>
+
+                                                                <li th:each="pageNo : ${#numbers.sequence(0, totalPages - 1)}" th:class="${page.number eq pageNo}? 'active' : ''">
+                                                                    <a th:if="${page.number  eq pageNo}" href="javascript:void(0);">
+                                                                        <span th:text="${pageNo + 1}"></span>
+                                                                    </a>
+                                                                    <a th:if="${not (page.number  eq pageNo)}" th:href="@{${'/products_list'}(page=${pageNo},size=${page.size})}">
+                                                                        <span th:text="${pageNo + 1}"></span>
+                                                                    </a>
+
+                                                                </li>
+                                                                <li th:class="${page.number + 1 ge totalPages} ? 'disabled' : ''">
+                                                                    <a th:if="${page.last}" th:href="@{${'/products_list'}(page=${page.number+1},size=${page.size})}">Next</a>
+                                                                    <!--<a th:if="${page.last}" href="javascript:void(0);">Next</a>-->
+                                                                </li>
+                                                            </ul>
                                                         </div>
                                                         <script type="text/javascript">
                                                             //<![CDATA[
@@ -887,7 +772,7 @@
             </div>
 
         </div>
-        <div id="box_z9adiqbax" style="background:url(/images/my/bottom_bg.jpg); width:100%; height:42px;">
+        <div id="box_z9adiqbax" style="background:url(/img/my/bottom_bg.jpg); width:100%; height:42px;">
             <div id="box_040fff" style=" margin:0 auto; width:1004px;line-height: 42px;">
 
                 <div xmlns="" class="columnSpace" id="elem-FrontSpecifies_show01-14239672938482" name="说明页">

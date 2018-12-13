@@ -222,7 +222,7 @@
 
 
 
-            // Configuration related to images
+            // Configuration related to img
 
 
 
@@ -230,7 +230,7 @@
 
 
 
-            imageLoading: '/images/my/lightbox/lightbox-ico-loading.gif', // (string) Path and the name of the loading icon
+            imageLoading: '/img/my/lightbox/lightbox-ico-loading.gif', // (string) Path and the name of the loading icon
 
 
 
@@ -238,7 +238,7 @@
 
 
 
-            imageBtnPrev: '/images/my/lightbox/lightbox-btn-prev.gif', // (string) Path and the name of the prev button image
+            imageBtnPrev: '/img/my/lightbox/lightbox-btn-prev.gif', // (string) Path and the name of the prev button image
 
 
 
@@ -246,7 +246,7 @@
 
 
 
-            imageBtnNext: '/images/my/lightbox/lightbox-btn-next.gif', // (string) Path and the name of the next button image
+            imageBtnNext: '/img/my/lightbox/lightbox-btn-next.gif', // (string) Path and the name of the next button image
 
 
 
@@ -254,7 +254,7 @@
 
 
 
-            imageBtnClose: '/images/my/lightbox/lightbox-btn-close.gif', // (string) Path and the name of the close btn
+            imageBtnClose: '/img/my/lightbox/lightbox-btn-close.gif', // (string) Path and the name of the close btn
 
 
 
@@ -262,7 +262,7 @@
 
 
 
-            imageBlank: '/images/my/lightbox/lightbox-blank.gif', // (string) Path and the name of a blank image (one pixel)
+            imageBlank: '/img/my/lightbox/lightbox-blank.gif', // (string) Path and the name of a blank image (one pixel)
 
 
 
@@ -560,7 +560,7 @@
 
 
 
-            // Unset total images in imageArray
+            // Unset total img in imageArray
 
 
 
@@ -624,7 +624,7 @@
 
 
 
-                // Add an Array (as many as we have), with href and title atributes, inside the Array that storage the images references		
+                // Add an Array (as many as we have), with href and title atributes, inside the Array that storage the img references
 
 
 
@@ -832,7 +832,7 @@
 
 
 
-        						<img src="../images/lightbox-ico-loading.gif">
+        						<img src="../img/lightbox-ico-loading.gif">
 
 
 
@@ -936,7 +936,7 @@
 
 
 
-        						<img src="../images/lightbox-btn-close.gif">
+        						<img src="../img/lightbox-btn-close.gif">
 
 
 
@@ -1873,7 +1873,7 @@
 
 
 
-            _preload_neighbor_images();
+            _preload_neighbor_img();
 
 
 
@@ -2181,7 +2181,7 @@
 
 
 
-                    // Show the images button for Next buttons
+                    // Show the img button for Next buttons
 
 
 
@@ -2379,7 +2379,7 @@
 
 
 
-                    // Show the images button for Next buttons
+                    // Show the img button for Next buttons
 
 
 
@@ -2951,7 +2951,7 @@
 
 
 
-         * Preload prev and next images being showed
+         * Preload prev and next img being showed
 
 
 
@@ -2975,7 +2975,7 @@
 
 
 
-        function _preload_neighbor_images() {
+        function _preload_neighbor_img() {
 
 
 
