@@ -33,77 +33,12 @@
 </head>
 
 <body id="products_list">
-
     <div class="pageWidth" id="box0_root">
         <!--[if lt IE 7]>
         <style type="text/css">
             #logo,#menuyapng { behavior: url(/images/my/iepngfix.htc) }
         </style>
         <![endif]-->
-        <script type="text/javascript">
-            //添加到收藏夹   
-            function AddFavorite(sURL, sTitle) {
-
-                try
-
-                {
-
-                    window.external.addFavorite(sURL, sTitle);
-
-                } catch (e)
-
-                {
-
-                    try
-
-                    {
-
-                        window.sidebar.addPanel(sTitle, sURL, "");
-
-                    } catch (e)
-
-                    {
-
-                        alert("加入收藏失败，请使用Ctrl+D进行添加");
-
-                    }
-
-                }
-
-            }
-
-            function setHomepage() {　 // 设置首页  
-
-                if (document.all) {
-
-                    document.body.style.behavior = 'url(#default#homepage)';
-
-                    document.body.setHomePage('http://www.baidu.com');
-
-                } else if (window.sidebar) {
-
-                    if (window.netscape) {
-
-                        try {
-
-                            netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
-
-                        } catch (e) {
-
-
-                            alert("该操作被浏览器拒绝，如果想启用该功能，请在地址栏内输入 about:config,然后将项 signed.applets.codebase_principal_support 值该为true");
-
-                        }
-                    }
-
-                    var prefs = Components.classes['@mozilla.org/preferences-service;1'].getService(Components.interfaces.nsIPrefBranch);
-
-                    prefs.setCharPref('browser.startup.homepage', 'http://www.baidu.com');
-
-                }
-
-            }
-        </script>
         <link _cke_saved_href="/img/favicon.ico" href="/img/favicon.ico" rel="shortcut icon" />
         <style type="text/css">
             #index #menu li#home a {
@@ -167,7 +102,6 @@
             #menu li:hover {
                 border: 0px solid #ccc;
                 padding: 0px;
-                background: ;
                 line-height: 24px;
             }
 
@@ -303,8 +237,8 @@
                                 <script type="text/javascript" src="/js/products/FrontProducts_generalSearch01.js"></script>
                                 <script type="text/javascript" src="/js/i18n/FrontProducts_generalSearch01.js"></script>
                                 <div id="FrontProducts_generalSearch01-13759478123710" class="FrontProducts_generalSearch01-d1_c1">
-                                    <form id="FrontProducts_generalSearch01-13759478123710_searchForm" name="FrontProducts_generalSearch01-13759478123710_searchForm" method="post" target="_self" onsubmit="return FrontProducts_generalSearch01.validateForm('FrontProducts_generalSearch01-13759478123710','true','Please enter the key');"
-                                        action="/FrontProducts.do?method=submit">
+                                    <form id="FrontProducts_generalSearch01-13759478123710_searchForm" name="FrontProducts_generalSearch01-13759478123710_searchForm" method="post" target="_self"
+                                        action="/">
                                         <input type="hidden" id="FrontProducts_generalSearch01-13759478123710_searchType" name="searchType" value="1" />
                                         <input type="hidden" id="FrontProducts_generalSearch01-13759478123710_propertyType" value="2" />
                                         <input type="hidden" id="FrontProducts_generalSearch01-13759478123710_areaType" value="" />
@@ -354,43 +288,24 @@
             }
         </style>
         <!--[if lte IE 6]>
-
-<div id="ie6-warning">您正在使用 Internet Explorer 6，在本页面的显示效果可能有差异。建议您升级到 
-
-<a href="http://www.microsoft.com/china/windows/internet-explorer/" target="_blank">Internet Explorer 8</a> 
-
-或以下浏览器： <a href="http://www.mozillaonline.com/">Firefox</a><br>
-
-最佳分辨率为：1440px * 990px  谢谢合作
-
-</div>
-
-<script type="text/javascript">
-
-function position_fixed(el, eltop, elleft){  
-
-       // check if this is IE6  
-
-       if(!window.XMLHttpRequest)  
-
-              window.onscroll = function(){  
-
-                     el.style.top = (document.documentElement.scrollTop + eltop)+"px";  
-
-                     el.style.left = (document.documentElement.scrollLeft + elleft)+"px";  
-
-       }  
-
-       else el.style.position = "fixed";  
-
-}
-
-       position_fixed(document.getElementById("ie6-warning"),0, 0);
-
-</script>
-
-<![endif]-->
-
+        <div id="ie6-warning">您正在使用 Internet Explorer 6，在本页面的显示效果可能有差异。建议您升级到
+            <a href="http://www.microsoft.com/china/windows/internet-explorer/" target="_blank">Internet Explorer 8</a>
+            或以下浏览器： <a href="http://www.mozillaonline.com/">Firefox</a><br>
+            最佳分辨率为：1440px * 990px  谢谢合作
+        </div>
+        <script type="text/javascript">
+            function position_fixed(el, eltop, elleft){
+                // check if this is IE6
+                if(!window.XMLHttpRequest)
+                    window.onscroll = function(){
+                        el.style.top = (document.documentElement.scrollTop + eltop)+"px";
+                        el.style.left = (document.documentElement.scrollLeft + elleft)+"px";
+                    };
+                else el.style.position = "fixed";
+            }
+            position_fixed(document.getElementById("ie6-warning"),0, 0);
+        </script>
+        <![endif]-->
 
         <div id="sub_center">
             <div class="box_bannern" id="box_banner">
@@ -434,10 +349,9 @@ function position_fixed(el, eltop, elleft){
                             <!--内页左侧 开始-->
                             <div id="sub_left">
                                 <div class="sub_left_1">
-                                    <h3> <span class="titleCn">PRODUCTS</span>
-
+                                    <h3>
+                                        <span class="titleCn">PRODUCTS</span>
                                         <span class="titleEn"></span>
-
                                     </h3>
 
                                     <div class="sub_category">
@@ -445,7 +359,6 @@ function position_fixed(el, eltop, elleft){
                                         <div id="box_1ya">
 
                                             <div class="columnSpace" id="elem-FrontProductsCategory_show01-0012ss" name="商品分类">
-
                                                 <script type="text/javascript" src="/js/widgets/jquery-plugin/jquery.hoverIntent.js"></script>
                                                 <script type="text/javascript" src="/js/widgets/jquery-plugin/mbMenu.js"></script>
                                                 <script type="text/javascript" src="/js/products/FrontProductsCategory_show01.js"></script>
@@ -475,48 +388,31 @@ function position_fixed(el, eltop, elleft){
                                                     <div class="menu-first vertMenu">
                                                         <ul class="rootVoices vertical">
                                                             <li class="rootVoice {menu: 'menu_33'} ">
-                                                                <a href="" target="_self" class="menu-text1 menu: 'menu_33'">
-      Auto Parts</a>
+                                                                <a href="" target="_self" class="menu-text1 menu: 'menu_33'">Auto Parts</a>
                                                             </li>
                                                             <li class="rootVoice {menu: 'menu_30'} ">
-                                                                <a href="" target="_self" class="menu-text1 menu: 'menu_30'">
-      Transmission Parts</a>
+                                                                <a href="" target="_self" class="menu-text1 menu: 'menu_30'">Transmission Parts</a>
                                                             </li>
                                                         </ul>
                                                     </div>
                                                     <div id="menu_33" class="mbmenu">
-                                                        <a href="" target="_self" class="{}">
-      Oil Pump</a>
-                                                        <a href="" target="_self" class="{}">
-      Oil Pump Rotor</a>
-                                                        <a href="" target="_self" class="{}">
-      Valve Lifter</a>
-                                                        <a href="" target="_self" class="{}">
-      Timing Kit</a>
-                                                        <a href="" target="_self" class="{}">
-      Timing Chain</a>
-                                                        <a href="" target="_self" class="{}">
-      Timing Gear</a>
-                                                        <a href="" target="_self" class="{}">
-      Tensioner</a>
-                                                        <a href="" target="_self" class="{}">
-      Guide Rail</a>
-                                                        <a href="" target="_self" class="{}">
-      Spark Plug</a>
-                                                        <a href="" target="_self" class="{}">
-      Tie Rod End</a>
+                                                        <a href="" target="_self" class="{}">Oil Pump</a>
+                                                        <a href="" target="_self" class="{}">Oil Pump Rotor</a>
+                                                        <a href="" target="_self" class="{}">Valve Lifter</a>
+                                                        <a href="" target="_self" class="{}">Timing Kit</a>
+                                                        <a href="" target="_self" class="{}">Timing Chain</a>
+                                                        <a href="" target="_self" class="{}">Timing Gear</a>
+                                                        <a href="" target="_self" class="{}">Tensioner</a>
+                                                        <a href="" target="_self" class="{}">Guide Rail</a>
+                                                        <a href="" target="_self" class="{}">Spark Plug</a>
+                                                        <a href="" target="_self" class="{}">Tie Rod End</a>
                                                     </div>
                                                     <div id="menu_30" class="mbmenu">
-                                                        <a href="" target="_self" class="{}">
-      Chain</a>
-                                                        <a href="" target="_self" class="{}">
-      Sprocket</a>
-                                                        <a href="" target="_self" class="{}">
-      Coupling</a>
-                                                        <a href="" target="_self" class="{}">
-      Pulley</a>
-                                                        <a href="" target="_self" class="{}">
-      Bush</a>
+                                                        <a href="" target="_self" class="{}">Chain</a>
+                                                        <a href="" target="_self" class="{}">Sprocket</a>
+                                                        <a href="" target="_self" class="{}">Coupling</a>
+                                                        <a href="" target="_self" class="{}">Pulley</a>
+                                                        <a href="" target="_self" class="{}">Bush</a>
                                                     </div>
                                                     <div id="menu_27" class="mbmenu">
                                                     </div>
@@ -569,8 +465,7 @@ function position_fixed(el, eltop, elleft){
                                         <div xmlns="" class="columnSpace" id="elem-FrontSpecifies_show01-13sgg780ff3" name="说明页">
 
                                             <div id="FrontSpecifies_show01-13sgg780ff3" class="FrontSpecifies_show01-d1_c1">
-                                                <p>
-                                                    Tel: +86-512-65830037<br /> Fax: +86-512-65529992</p>
+                                                <p>Tel: +86-512-65830037<br /> Fax: +86-512-65529992</p>
                                             </div>
 
                                         </div>
@@ -590,17 +485,10 @@ function position_fixed(el, eltop, elleft){
                                 <div id="sub_right_title">
 
                                     <h2>
-
                                         <span class="location">LOCAL: 
-
-                        <a href="/">HOME</a> - PRODUCTS -
-
-                        <span class="sitemap"></span>
-
+                                            <a href="/">HOME</a> - PRODUCTS -<span class="sitemap"></span>
                                         </span>
-
                                         <span class="sitemap"></span>
-
                                     </h2>
 
                                 </div>
@@ -621,7 +509,7 @@ function position_fixed(el, eltop, elleft){
                                                     <script type="text/javascript" src="/js/products/FrontProducts_list01.js"></script>
                                                     <script type="text/javascript" src="/js/i18n/FrontProducts_list01.js"></script>
                                                     <div id="FrontProducts_list01-004fs" class="FrontProducts_list01-d1_c1">
-                                                        <form id="FrontProducts_list01-004fs_Form" name="FrontProducts_list01-004fs_Form" action="/FrontProducts.do?method=submit" method="post">
+                                                        <form id="FrontProducts_list01-004fs_Form" name="FrontProducts_list01-004fs_Form" action="/" method="post">
                                                             <input type="hidden" name="action_page" value="/products_list" />
                                                             <input type="hidden" name="pmcId" value="36" />
                                                             <input type="hidden" name="pmscId" value="" />
@@ -637,15 +525,15 @@ function position_fixed(el, eltop, elleft){
                                                             <input type="hidden" name="pageSize_FrontProducts_list01-004fs" value="6" />
                                                         </form>
                                                         <div class="type">
-                                                            <span class="sort">
-				</span>
+                                                            <span class="sort"></span>
                                                         </div>
                                                         <ul class="mainul productlist-02">
                                                             <li class="content column-num3">
                                                                 <div class="pic-module">
                                                                     <div class="pic">
                                                                         <a href="/products_detail/productId=411.html" title="VW 026  115  105B" target="_self">
-											<img src= "/imageRepository/2a19202f-9426-4847-a017-320a4c600561.jpg" id= "FrontProducts_list01-004fs_411" alt= "" title= "VW 026  115  105B" onerror= "this.src='/images/common/noimage.jpg'" /></a>
+                                                                            <img src= "/imageRepository/2a19202f-9426-4847-a017-320a4c600561.jpg" id= "FrontProducts_list01-004fs_411" alt= "" title= "VW 026  115  105B" onerror= "this.src='/img/common/noimage.jpg'" />
+                                                                        </a>
                                                                     </div>
                                                                 </div>
                                                                 <div class="pro-module">
@@ -653,13 +541,7 @@ function position_fixed(el, eltop, elleft){
                                                                         <li class="code">
                                                                             <h1>
                                                                                 <span>Name: </span>
-                                                                                <strong>
-											<a href="/products_detail/productId=411.html"
-												title="VW 026  115  105B"
-												target="_self"
-												>
-												VW 026  115  105B</a>
-										</strong>
+                                                                                <strong><a href="/products_detail/productId=411.html" title="VW 026  115  105B" target="_self">VW 026  115  105B</a></strong>
                                                                             </h1>
                                                                         </li>
                                                                     </ul>
@@ -671,7 +553,8 @@ function position_fixed(el, eltop, elleft){
                                                                 <div class="pic-module">
                                                                     <div class="pic">
                                                                         <a href="/products_detail/productId=102.html" title="DAEWOO 9 6 3 5 0 1 5 9/ 9 6 5 4 1 5 0 5" target="_self">
-											<img src= "/imageRepository/2ba0585f-7dfe-4fee-99f4-0100691a11e5.jpg" id= "FrontProducts_list01-004fs_102" alt= "" title= "DAEWOO 9 6 3 5 0 1 5 9/ 9 6 5 4 1 5 0 5" onerror= "this.src='/images/common/noimage.jpg'" /></a>
+                                                                            <img src= "/imageRepository/2ba0585f-7dfe-4fee-99f4-0100691a11e5.jpg" id= "FrontProducts_list01-004fs_102" alt= "" title= "DAEWOO 9 6 3 5 0 1 5 9/ 9 6 5 4 1 5 0 5" onerror= "this.src='/img/common/noimage.jpg'" />
+                                                                        </a>
                                                                     </div>
                                                                 </div>
                                                                 <div class="pro-module">
@@ -679,13 +562,7 @@ function position_fixed(el, eltop, elleft){
                                                                         <li class="code">
                                                                             <h1>
                                                                                 <span>Name: </span>
-                                                                                <strong>
-											<a href="/products_detail/productId=102.html"
-												title="DAEWOO 9 6 3 5 0 1 5 9/ 9 6 5 4 1 5 0 5"
-												target="_self"
-												>
-												DAEWOO 9 6 3 5 0 1 5 9/ 9 6 5 4 1 5 0 5</a>
-										</strong>
+                                                                                <strong><a href="/products_detail/productId=102.html" title="DAEWOO 9 6 3 5 0 1 5 9/ 9 6 5 4 1 5 0 5" target="_self">DAEWOO 9 6 3 5 0 1 5 9/ 9 6 5 4 1 5 0 5</a></strong>
                                                                             </h1>
                                                                         </li>
                                                                     </ul>
@@ -697,7 +574,8 @@ function position_fixed(el, eltop, elleft){
                                                                 <div class="pic-module">
                                                                     <div class="pic">
                                                                         <a href="/products_detail/productId=350.html" title="021.115.105B" target="_self">
-											<img src= "/imageRepository/10f4dda5-ec4d-43d3-b1db-e908df342d3e.jpg" id= "FrontProducts_list01-004fs_350" alt= "" title= "021.115.105B" onerror= "this.src='/images/common/noimage.jpg'" /></a>
+                                                                            <img src= "/imageRepository/10f4dda5-ec4d-43d3-b1db-e908df342d3e.jpg" id= "FrontProducts_list01-004fs_350" alt= "" title= "021.115.105B" onerror= "this.src='/img/common/noimage.jpg'" />
+                                                                        </a>
                                                                     </div>
                                                                 </div>
                                                                 <div class="pro-module">
@@ -705,13 +583,7 @@ function position_fixed(el, eltop, elleft){
                                                                         <li class="code">
                                                                             <h1>
                                                                                 <span>Name: </span>
-                                                                                <strong>
-											<a href="/products_detail/productId=350.html"
-												title="021.115.105B"
-												target="_self"
-												>
-												021.115.105B</a>
-										</strong>
+                                                                                <strong><a href="/products_detail/productId=350.html" title="021.115.105B" target="_self">021.115.105B</a></strong>
                                                                             </h1>
                                                                         </li>
                                                                     </ul>
@@ -724,7 +596,8 @@ function position_fixed(el, eltop, elleft){
                                                                 <div class="pic-module">
                                                                     <div class="pic">
                                                                         <a href="/products_detail/productId=468.html" title="2108" target="_self">
-											<img src= "/imageRepository/014dfec9-c021-4923-aad2-e21a125d51f1.jpg" id= "FrontProducts_list01-004fs_468" alt= "" title= "2108" onerror= "this.src='/images/common/noimage.jpg'" /></a>
+                                                                            <img src= "/imageRepository/014dfec9-c021-4923-aad2-e21a125d51f1.jpg" id= "FrontProducts_list01-004fs_468" alt= "" title= "2108" onerror= "this.src='/img/common/noimage.jpg'" />
+                                                                        </a>
                                                                     </div>
                                                                 </div>
                                                                 <div class="pro-module">
@@ -732,13 +605,7 @@ function position_fixed(el, eltop, elleft){
                                                                         <li class="code">
                                                                             <h1>
                                                                                 <span>Name: </span>
-                                                                                <strong>
-											<a href="/products_detail/productId=468.html"
-												title="2108"
-												target="_self"
-												>
-												2108</a>
-										</strong>
+                                                                                <strong><a href="/products_detail/productId=468.html" title="2108" target="_self">2108</a></strong>
                                                                             </h1>
                                                                         </li>
                                                                     </ul>
@@ -750,7 +617,8 @@ function position_fixed(el, eltop, elleft){
                                                                 <div class="pic-module">
                                                                     <div class="pic">
                                                                         <a href="/products_detail/productId=336.html" title="2109" target="_self">
-											<img src= "/imageRepository/bf38a762-b3d6-4817-8b9c-18f2b02710f7.jpg" id= "FrontProducts_list01-004fs_336" alt= "" title= "2109" onerror= "this.src='/images/common/noimage.jpg'" /></a>
+                                                                            <img src= "/imageRepository/bf38a762-b3d6-4817-8b9c-18f2b02710f7.jpg" id= "FrontProducts_list01-004fs_336" alt= "" title= "2109" onerror= "this.src='/img/common/noimage.jpg'" />
+                                                                        </a>
                                                                     </div>
                                                                 </div>
                                                                 <div class="pro-module">
@@ -758,25 +626,19 @@ function position_fixed(el, eltop, elleft){
                                                                         <li class="code">
                                                                             <h1>
                                                                                 <span>Name: </span>
-                                                                                <strong>
-											<a href="/products_detail/productId=336.html"
-												title="2109"
-												target="_self"
-												>
-												2109</a>
-										</strong>
+                                                                                <strong><a href="/products_detail/productId=336.html" title="2109" target="_self">2109</a></strong>
                                                                             </h1>
                                                                         </li>
                                                                     </ul>
-                                                                    <p class="buttonP">
-                                                                    </p>
+                                                                    <p class="buttonP"></p>
                                                                 </div>
                                                             </li>
                                                             <li class="content column-num3">
                                                                 <div class="pic-module">
                                                                     <div class="pic">
                                                                         <a href="/products_detail/productId=72.html" title="2110" target="_self">
-											<img src= "/imageRepository/330d221e-54b8-4bbf-92b1-c11636e24427.jpg" id= "FrontProducts_list01-004fs_72" alt= "" title= "2110" onerror= "this.src='/images/common/noimage.jpg'" /></a>
+                                                                            <img src= "/imageRepository/330d221e-54b8-4bbf-92b1-c11636e24427.jpg" id= "FrontProducts_list01-004fs_72" alt= "" title= "2110" onerror= "this.src='/img/common/noimage.jpg'" />
+                                                                        </a>
                                                                     </div>
                                                                 </div>
                                                                 <div class="pro-module">
@@ -784,18 +646,11 @@ function position_fixed(el, eltop, elleft){
                                                                         <li class="code">
                                                                             <h1>
                                                                                 <span>Name: </span>
-                                                                                <strong>
-											<a href="/products_detail/productId=72.html"
-												title="2110"
-												target="_self"
-												>
-												2110</a>
-										</strong>
+                                                                                <strong><a href="/products_detail/productId=72.html" title="2110" target="_self">2110</a></strong>
                                                                             </h1>
                                                                         </li>
                                                                     </ul>
-                                                                    <p class="buttonP">
-                                                                    </p>
+                                                                    <p class="buttonP"></p>
                                                                 </div>
                                                             </li>
                                                             <li class="clearBoth"></li>
@@ -804,11 +659,18 @@ function position_fixed(el, eltop, elleft){
                                                             <div class="bottom">
                                                                 <div class="pageJump">
                                                                     <div class="totalcount">current show 1-6 record total 572 record </div>
-                                                                    <div class="number"><span class="disabled">first</span><span class="disabled">previous</span><span class="current">1</span><a href="#" onclick="return jump_2edd1829e1b9485eb03d6ce2be5ee2d5(2,6);">2</a>
-                                                                        <a
-                                                                            href="#" onclick="return jump_2edd1829e1b9485eb03d6ce2be5ee2d5(3,6);">3</a><span class="omit">...</span><a href="#" onclick="return jump_2edd1829e1b9485eb03d6ce2be5ee2d5(95,6);">95</a><a href="#" onclick="return jump_2edd1829e1b9485eb03d6ce2be5ee2d5(96,6);">96</a>
-                                                                            <a
-                                                                                href="#" onclick="return jump_2edd1829e1b9485eb03d6ce2be5ee2d5(2,6);">next</a><a href="#" onclick="return jump_2edd1829e1b9485eb03d6ce2be5ee2d5(96,6);">last</a></div>
+                                                                    <div class="number">
+                                                                        <span class="disabled">first</span>
+                                                                        <span class="disabled">previous</span>
+                                                                        <span class="current">1</span>
+                                                                        <a href="#" onclick="return (2,6);">2</a>
+                                                                        <a href="#" onclick="return (3,6);">3</a>
+                                                                        <span class="omit">...</span>
+                                                                        <a href="#" onclick="return (95,6);">95</a>
+                                                                        <a href="#" onclick="return (96,6);">96</a>
+                                                                        <a href="#" onclick="return (2,6);">next</a>
+                                                                        <a href="#" onclick="return (96,6);">last</a>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -926,10 +788,6 @@ function position_fixed(el, eltop, elleft){
         </div>
 
         <!--内页左侧 结束-->
-
-        <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-
-        <title>欣泰国际有限公司</title>
 
         <div id="footer_bg">
 
