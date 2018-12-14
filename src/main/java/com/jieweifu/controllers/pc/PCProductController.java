@@ -55,6 +55,15 @@ public class PCProductController {
                     .collect(Collectors.toList());
             model.addAttribute("pageNumbers", pageNumbers);
         }
+
+        List<ParentType> types = new ArrayList<>();
+        types = productTypeService.getAllParentTypes();
+        model.addAttribute("parentTypes", types);
+
+        List<ChildType> childTypes = new ArrayList<>();
+        childTypes = productTypeService.getAllChildTypes();
+        model.addAttribute("childTypes", childTypes);
+
         return "products_list";
     }
 
