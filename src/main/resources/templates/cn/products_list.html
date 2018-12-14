@@ -367,62 +367,18 @@
                                                 <div id="FrontProductsCategory_show01-0012ss" class="FrontProductsCategory_show01-d2_c1">
                                                     <div class="menu-first vertMenu">
                                                         <ul class="rootVoices vertical">
-                                                            <li class="rootVoice {menu: 'menu_33'} ">
-                                                                <a href="" target="_self" class="menu-text1 menu: 'menu_33'">Auto Parts</a>
+                                                            <li th:each="parent : ${parentTypes}">
+                                                                <a href="" th:href="@{/cn/products_list(parentId=${parent.id})}"  target="_self" th:text="${parent.cnParentName}">Auto Parts</a>
+                                                                <ul th:if="${child.parentId eq parent.id}" th:each="child : ${childTypes}">
+                                                                    <li>
+                                                                        <a style="margin-left: 20px" th:href="@{/cn/products_list(childId=${child.id})}" th:text="${child.cnChildName}"></a>
+                                                                    </li>
+                                                                </ul>
                                                             </li>
-                                                            <li class="rootVoice {menu: 'menu_30'} ">
-                                                                <a href="" target="_self" class="menu-text1 menu: 'menu_30'">Transmission Parts</a>
-                                                            </li>
+                                                            <!--<li class="rootVoice {menu: 'menu_30'} ">-->
+                                                                <!--<a href="" target="_self" class="menu-text1 menu: 'menu_30'">Transmission Parts</a>-->
+                                                            <!--</li>-->
                                                         </ul>
-                                                    </div>
-                                                    <div id="menu_33" class="mbmenu">
-                                                        <a href="" target="_self" class="{}">Oil Pump</a>
-                                                        <a href="" target="_self" class="{}">Oil Pump Rotor</a>
-                                                        <a href="" target="_self" class="{}">Valve Lifter</a>
-                                                        <a href="" target="_self" class="{}">Timing Kit</a>
-                                                        <a href="" target="_self" class="{}">Timing Chain</a>
-                                                        <a href="" target="_self" class="{}">Timing Gear</a>
-                                                        <a href="" target="_self" class="{}">Tensioner</a>
-                                                        <a href="" target="_self" class="{}">Guide Rail</a>
-                                                        <a href="" target="_self" class="{}">Spark Plug</a>
-                                                        <a href="" target="_self" class="{}">Tie Rod End</a>
-                                                    </div>
-                                                    <div id="menu_30" class="mbmenu">
-                                                        <a href="" target="_self" class="{}">Chain</a>
-                                                        <a href="" target="_self" class="{}">Sprocket</a>
-                                                        <a href="" target="_self" class="{}">Coupling</a>
-                                                        <a href="" target="_self" class="{}">Pulley</a>
-                                                        <a href="" target="_self" class="{}">Bush</a>
-                                                    </div>
-                                                    <div id="menu_27" class="mbmenu">
-                                                    </div>
-                                                    <div id="menu_32" class="mbmenu">
-                                                    </div>
-                                                    <div id="menu_39" class="mbmenu">
-                                                    </div>
-                                                    <div id="menu_26" class="mbmenu">
-                                                    </div>
-                                                    <div id="menu_31" class="mbmenu">
-                                                    </div>
-                                                    <div id="menu_29" class="mbmenu">
-                                                    </div>
-                                                    <div id="menu_28" class="mbmenu">
-                                                    </div>
-                                                    <div id="menu_21" class="mbmenu">
-                                                    </div>
-                                                    <div id="menu_37" class="mbmenu">
-                                                    </div>
-                                                    <div id="menu_23" class="mbmenu">
-                                                    </div>
-                                                    <div id="menu_34" class="mbmenu">
-                                                    </div>
-                                                    <div id="menu_24" class="mbmenu">
-                                                    </div>
-                                                    <div id="menu_38" class="mbmenu">
-                                                    </div>
-                                                    <div id="menu_25" class="mbmenu">
-                                                    </div>
-                                                    <div id="menu_22" class="mbmenu">
                                                     </div>
                                                 </div>
 
