@@ -36,17 +36,30 @@ public class PCProductController {
     @GetMapping("products_list")
     public String listProducts(Model model,
                                @RequestParam("page") Optional<Integer> page,
-                               @RequestParam("size") Optional<Integer> size) {
+                               @RequestParam("size") Optional<Integer> size,
+                               @RequestParam(value = "parentId", required = false) Integer parentId,
+                               @RequestParam(value = "childId", required = false) Integer childId) {
         int currentPage = page.orElse(0);
         int pageSize = size.orElse(6);
 
         Pageable pageable = new PageRequest(currentPage, pageSize);
+
         Page<Products> productPage = productsService.findPaginated(pageable);
-
-        model.addAttribute("page", productPage);
-
         int totalPages = productsService.getProductsTotal();
 
+        if (parentId != null) {
+            productPage = productsService.listProductsByParent(pageable, parentId);
+            totalPages = productsService.getTotalByParent(parentId);
+            model.addAttribute("parentId", parentId);
+        }
+
+        if (childId != null) {
+            productPage = productsService.listProductsByChild(pageable, childId);
+            totalPages = productsService.getTotalByChild(childId);
+            model.addAttribute("childId", childId);
+        }
+
+        model.addAttribute("page", productPage);
         model.addAttribute("totalPages", totalPages);
 
         if (totalPages > 0) {
@@ -70,18 +83,32 @@ public class PCProductController {
     @GetMapping("/cn/products_list")
     public String cnListProducts(Model model,
                                  @RequestParam("page") Optional<Integer> page,
-                                 @RequestParam("size") Optional<Integer> size) {
+                                 @RequestParam("size") Optional<Integer> size,
+                                 @RequestParam(value = "parentId", required = false) Integer parentId,
+                                 @RequestParam(value = "childId", required = false) Integer childId) {
         int currentPage = page.orElse(0);
         int pageSize = size.orElse(6);
 
 //        List<Products> list = productsService.listProducts(currentPage, pageSize);
 
         Pageable pageable = new PageRequest(currentPage, pageSize);
+
         Page<Products> productPage = productsService.findPaginated(pageable);
+        int totalPages = productsService.getProductsTotal();
+
+        if (parentId != null) {
+            productPage = productsService.listProductsByParent(pageable, parentId);
+            totalPages = productsService.getTotalByParent(parentId);
+            model.addAttribute("parentId", parentId);
+        }
+
+        if (childId != null) {
+            productPage = productsService.listProductsByChild(pageable, childId);
+            totalPages = productsService.getTotalByChild(childId);
+            model.addAttribute("childId", childId);
+        }
 
         model.addAttribute("page", productPage);
-
-        int totalPages = productsService.getProductsTotal();
         model.addAttribute("totalPages", totalPages);
 
         if (totalPages > 0) {

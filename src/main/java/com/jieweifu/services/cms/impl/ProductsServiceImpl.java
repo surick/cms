@@ -12,6 +12,7 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -93,6 +94,60 @@ public class ProductsServiceImpl implements ProductsService {
                 = new PageImpl<Products>(list, pageable, list.size());
 
         return productPage;
+    }
+
+    @Override
+    public Page<Products> listProductsByChild(Pageable pageable, Integer childId) {
+        int pageSize = pageable.getPageSize();
+        int currentPage = pageable.getPageNumber();
+        List<Products> list = db.select()
+                .from(Products.class)
+                .where("child_type_id = ? AND deleted = 0", childId)
+                .limit(currentPage, pageSize)
+                .queryForList(Products.class);
+
+        Page<Products> products
+                = new PageImpl<>(list, pageable, list.size());
+        return products;
+    }
+
+    @Override
+    public int getTotalByChild(Integer childId) {
+        return db.select()
+                .from(Products.class)
+                .where("child_type_id = ? AND deleted = 0", childId)
+                .total();
+    }
+
+    @Override
+    public Page<Products> listProductsByParent(Pageable pageable, Integer parentId) {
+        int pageSize = pageable.getPageSize();
+        int currentPage = pageable.getPageNumber();
+        List<ChildType> childTypeList = productTypeService.getChildTypesByParentId(parentId);
+        List<Integer> childIds = childTypeList.stream().map(ChildType::getId).collect(Collectors.toList());
+
+        List<Products> list = new ArrayList<>();
+        if (childIds != null && childIds.size() > 0) {
+            list = db.select()
+                    .from(Products.class)
+                    .where("child_type_id IN ? AND deleted = 0", childIds)
+                    .limit(currentPage, pageSize)
+                    .queryForList(Products.class);
+        }
+
+        Page<Products> products
+                = new PageImpl<>(list, pageable, list.size());
+        return products;
+    }
+
+    @Override
+    public int getTotalByParent(Integer parentId) {
+        List<ChildType> childTypeList = productTypeService.getChildTypesByParentId(parentId);
+        List<Integer> childIds = childTypeList.stream().map(ChildType::getId).collect(Collectors.toList());
+        return childIds.size() > 0 ? db.select()
+                .from(Products.class)
+                .where("child_type_id IN ? AND deleted = 0", childIds)
+                .total() : 0;
     }
 
     @Override

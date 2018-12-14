@@ -29,7 +29,7 @@
     <script type="text/javascript" src="/js/product/list.js"></script>
     <script language="javascript" src="/img/my/lightbox/jquery.lightbox-0.5.js" type="text/javascript"></script>
     <script language="javascript" src="/js/product/list2.js"></script>
-
+    <script type="text/javascript" src="/img/my/js/jscroll.js"></script>
 </head>
 
 <body id="products_list">
@@ -493,21 +493,21 @@
                                                         <div style="float: right">
                                                             <ul class="pagination">
                                                                 <li th:class="${page.number eq 0} ? 'disabled' : ''">
-                                                                    <a th:if="${not page.first}" th:href="@{${'/products_list'}(page=${page.number-1},size=${page.size})}">Previous</a>
+                                                                    <a th:if="${not page.first}" th:href="@{${'/products_list'}(page=${page.number-1},size=${page.size},parentId=${parentId},childId=${childId})}">Previous</a>
                                                                     <a th:if="${page.first}" href="javascript:void(0);">Previous</a>
                                                                 </li>
 
-                                                                <li th:each="pageNo : ${#numbers.sequence(0, totalPages - 1)}" th:class="${page.number eq pageNo}? 'active' : ''">
+                                                                <li th:each="pageNo : ${#numbers.sequence(0, totalPages)}" th:class="${page.number eq pageNo}? 'active' : ''">
                                                                     <a th:if="${page.number  eq pageNo}" href="javascript:void(0);">
                                                                         <span th:text="${pageNo + 1}"></span>
                                                                     </a>
-                                                                    <a th:if="${not (page.number  eq pageNo)}" th:href="@{${'/products_list'}(page=${pageNo},size=${page.size})}">
+                                                                    <a th:if="${not (page.number  eq pageNo)}" th:href="@{${'/products_list'}(page=${pageNo},size=${page.size},parentId=${parentId},childId=${childId})}">
                                                                         <span th:text="${pageNo + 1}"></span>
                                                                     </a>
 
                                                                 </li>
                                                                 <li th:class="${page.number + 1 ge totalPages} ? 'disabled' : ''">
-                                                                    <a th:if="${page.last}" th:href="@{${'/products_list'}(page=${page.number+1},size=${page.size})}">Next</a>
+                                                                    <a th:if="${page.last}" th:href="@{${'/products_list'}(page=${page.number+1},size=${page.size},parentId=${parentId},childId=${childId})}">Next</a>
                                                                     <!--<a th:if="${page.last}" href="javascript:void(0);">Next</a>-->
                                                                 </li>
                                                             </ul>

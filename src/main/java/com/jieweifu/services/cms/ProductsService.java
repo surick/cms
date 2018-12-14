@@ -59,6 +59,36 @@ public interface ProductsService {
     Page<Products> findPaginated(Pageable pageable);
 
     /**
+     * 子分页
+     * @param pageable
+     * @param childId
+     * @return
+     */
+    Page<Products> listProductsByChild(Pageable pageable, Integer childId);
+
+    /**
+     * 子分页数
+     * @param childId
+     * @return
+     */
+    int getTotalByChild(Integer childId);
+
+    /**
+     * 父分页
+     * @param pageable
+     * @param parentId
+     * @return
+     */
+    Page<Products> listProductsByParent(Pageable pageable, Integer parentId);
+
+    /**
+     * 父分页数
+     * @param parentId
+     * @return
+     */
+    int getTotalByParent(Integer parentId);
+
+    /**
      * 分页数
      * @return
      */
