@@ -3,15 +3,15 @@
 
  Source Server         : tx
  Source Server Type    : MySQL
- Source Server Version : 50721
+ Source Server Version : 50724
  Source Host           : 111.231.93.42:3306
  Source Schema         : cms
 
  Target Server Type    : MySQL
- Target Server Version : 50721
+ Target Server Version : 50724
  File Encoding         : 65001
 
- Date: 29/11/2018 17:12:11
+ Date: 17/12/2018 16:57:19
 */
 
 SET NAMES utf8mb4;
@@ -471,7 +471,7 @@ CREATE TABLE `base_user` (
 -- Records of base_user
 -- ----------------------------
 BEGIN;
-INSERT INTO `base_user` VALUES (1, 'admin', '5b9537449135000e635c26439322c343', '3616aaed319138a2415c1d78844aea32', 'admin', '', '', '', '', 0, 0, 'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3448484253,3685836170&fm=27&gp=0.jpg', '', '', '', '', '', '', '', '', '', '', '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, '0', 1, '', '', '', '', NULL);
+INSERT INTO `base_user` VALUES (1, 'admin', 'bf66da6045be8f4850a4b7b5f04af26b', '5176e0cb82184816bb66c0772a2b2599', 'admin', '', '', '13888888888', 'test@jiweifu.com', 0, 0, 'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3448484253,3685836170&fm=27&gp=0.jpg', '', '', '', '', '', '1544066663108', 'admin', 'admin', '127.0.0.1', '', '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, '0', 1, '', '', '', '', NULL);
 INSERT INTO `base_user` VALUES (36, 'a123456', '5b9537449135000e635c26439322c343', '3616aaed319138a2415c1d78844aea32', '用户A', '2017-11-08', '测试地址A', '13145030711', '962615727@qq.com', 1, 1, '', '', '1511402175025', '1', 'admin', '127.0.0.1', '1515392490648', '1', 'admin', '127.0.0.1', '', '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, '001', 0, '管理员', '123456789', 'wechat', 'wechat', 1);
 INSERT INTO `base_user` VALUES (37, 'b123456', '82b37a7bf9367ed76959462134a4d7d4', 'fe8ce3d06286497fbaf1449c93f74425', '用户B', '2017-11-03', '测试地址B', '13145030711', '962615727@qq.com', 1, 1, '', '', '1511402791655', '1', 'admin', '127.0.0.1', '1515400050773', '1', 'admin', '127.0.0.1', '', '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, '0010001', 0, '生产商', '1', '1', '1', 36);
 INSERT INTO `base_user` VALUES (38, 'c123456', '848f81df85831156eb16b0554714b292', '64ad313a5a914bd9abf7082143a16195', '用户C', '2017-11-02', '测试地址C', '13145030711', '962615727@qq.com', 1, 1, '', '', '1511402830357', '1', 'admin', '127.0.0.1', '1515392662824', '1', 'admin', '127.0.0.1', '', '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, '00100010001', 1, '经销商', '', '', '', 36);
@@ -491,7 +491,17 @@ CREATE TABLE `cms_about` (
   `cn_content` varchar(2000) DEFAULT NULL COMMENT '内容cn',
   `type` int(2) NOT NULL COMMENT ' 1:company profile 2:culture 3:honors 4:technology',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4;
+
+-- ----------------------------
+-- Records of cms_about
+-- ----------------------------
+BEGIN;
+INSERT INTO `cms_about` VALUES (1, '', '<p>hhhhahhahahahahh a]</p><p><br/></p><p>a</p><p>a</p><p>a</p><p>a</p><p>a</p><p>a</p><p><br/></p>', NULL, '<ol class=\" list-paddingleft-2\" style=\"list-style-type: decimal;\"><li><p>哈哈哈哈啊啊哈啊哈</p></li><li><p>👌<br/></p></li></ol>', 1);
+INSERT INTO `cms_about` VALUES (2, NULL, '<p>少时诵诗书</p><p><em>试试</em></p><table><tbody><tr class=\"firstRow\"><td width=\"204\" valign=\"top\" style=\"word-break: break-all;\">试试</td><td width=\"204\" valign=\"top\"><br/></td><td width=\"204\" valign=\"top\"><br/></td><td width=\"204\" valign=\"top\"><br/></td><td width=\"204\" valign=\"top\"><br/></td></tr><tr><td width=\"204\" valign=\"top\"><br/></td><td width=\"204\" valign=\"top\"><br/></td><td width=\"204\" valign=\"top\"><br/></td><td width=\"204\" valign=\"top\"><br/></td><td width=\"204\" valign=\"top\"><br/></td></tr><tr><td width=\"204\" valign=\"top\"><br/></td><td width=\"204\" valign=\"top\"><br/></td><td width=\"204\" valign=\"top\"><br/></td><td width=\"204\" valign=\"top\"><br/></td><td width=\"204\" valign=\"top\"><br/></td></tr></tbody></table><p><br/></p>', NULL, '<p><span style=\"text-decoration: line-through;\">是是是</span></p>', 2);
+INSERT INTO `cms_about` VALUES (3, NULL, '<ol class=\" list-paddingleft-2\" style=\"list-style-type: decimal;\"><li><p>sssss</p></li><li><p>ccccc</p></li><li><p>sscsca</p></li><li><p>c</p></li><li><p>asca</p></li><li><p>sss<br/></p></li></ol>', NULL, '<ol class=\" list-paddingleft-2\" style=\"list-style-type: decimal;\"><li><p>双手合十傻傻</p></li><li><p>三生三世<br/></p></li></ol>', 3);
+INSERT INTO `cms_about` VALUES (4, NULL, '<ol class=\" list-paddingleft-2\" style=\"list-style-type: decimal;\"><li><p>sss</p></li><li><p>sss</p></li><li><p>s</p></li></ol><p>ss<br/></p><p><br/></p>', NULL, '<ol class=\" list-paddingleft-2\" style=\"list-style-type: decimal;\"><li><p>你说你🐎</p></li></ol>', 4);
+COMMIT;
 
 -- ----------------------------
 -- Table structure for cms_child_type
@@ -504,13 +514,15 @@ CREATE TABLE `cms_child_type` (
   `deleted` smallint(2) DEFAULT '0' COMMENT '是否删除',
   `cn_child_name` varchar(30) DEFAULT NULL COMMENT 'cn子类别名',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Records of cms_child_type
 -- ----------------------------
 BEGIN;
-INSERT INTO `cms_child_type` VALUES (1, 1, 'testChild2', 0, NULL);
+INSERT INTO `cms_child_type` VALUES (1, 1, 'testChild2', 0, '吃吃');
+INSERT INTO `cms_child_type` VALUES (2, 3, 'wdnmd', 0, '我打你🐎');
+INSERT INTO `cms_child_type` VALUES (3, 1, 'cccss', 0, '测试三十年');
 COMMIT;
 
 -- ----------------------------
@@ -522,7 +534,14 @@ CREATE TABLE `cms_contact` (
   `content` varchar(2000) DEFAULT NULL COMMENT '内容',
   `cn_content` varchar(2000) DEFAULT NULL COMMENT 'cn内容',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
+
+-- ----------------------------
+-- Records of cms_contact
+-- ----------------------------
+BEGIN;
+INSERT INTO `cms_contact` VALUES (1, '是是是是是是', '<p>洒水多&nbsp; 按时按时 按时是</p><p><strong>三生三世是 是</strong></p><ol class=\" list-paddingleft-2\" style=\"list-style-type: decimal;\"><li><p><strong><em>是是是</em></strong></p></li><li><p><strong><em>ssssss</em></strong></p></li></ol><p><strong></strong></p>');
+COMMIT;
 
 -- ----------------------------
 -- Table structure for cms_feedback
@@ -536,8 +555,20 @@ CREATE TABLE `cms_feedback` (
   `content` varchar(500) DEFAULT NULL COMMENT '内容',
   `area` varchar(20) DEFAULT NULL COMMENT '区域',
   `address` varchar(50) DEFAULT NULL COMMENT '地址',
+  `deleted` smallint(2) DEFAULT '0' COMMENT '是否删除',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4;
+
+-- ----------------------------
+-- Records of cms_feedback
+-- ----------------------------
+BEGIN;
+INSERT INTO `cms_feedback` VALUES (1, 'feedback', 'hah', 'just', 'ss', 'sz', 'js', 0);
+INSERT INTO `cms_feedback` VALUES (2, 'test', '12121212', '1212', 'asdasdad>sd//ad.', '12', '12', 0);
+INSERT INTO `cms_feedback` VALUES (3, 'testwww', '12121212w', '1212w', 'asdasdad>sd//ad.wwww', '12w', '12w', 0);
+INSERT INTO `cms_feedback` VALUES (4, '', '', '', 'sssss', '', '', 0);
+INSERT INTO `cms_feedback` VALUES (5, 'sss', 'aaa', 'aaa', 'sssssss', 'a', '', 0);
+COMMIT;
 
 -- ----------------------------
 -- Table structure for cms_parent_type
@@ -556,7 +587,7 @@ CREATE TABLE `cms_parent_type` (
 -- ----------------------------
 BEGIN;
 INSERT INTO `cms_parent_type` VALUES (1, 'test2', 0, '哈哈');
-INSERT INTO `cms_parent_type` VALUES (2, 'test', 0, '测试');
+INSERT INTO `cms_parent_type` VALUES (2, 'test', 0, '测试1');
 INSERT INTO `cms_parent_type` VALUES (3, 'test', 0, '测试');
 INSERT INTO `cms_parent_type` VALUES (4, '123', 1, 'cncnccncnncnc');
 INSERT INTO `cms_parent_type` VALUES (5, 'sjsjsj', 0, '中文中文');
@@ -577,14 +608,19 @@ CREATE TABLE `cms_products` (
   `cn_name` varchar(30) DEFAULT NULL COMMENT 'cn产品名',
   `cn_content` varchar(500) DEFAULT NULL COMMENT 'cn内容',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4;
 
 -- ----------------------------
 -- Records of cms_products
 -- ----------------------------
 BEGIN;
-INSERT INTO `cms_products` VALUES (1, 'test', 1, '/Users/jin/Downloads/static/uploads/products/3a86f18e-46ae-476d-ae01-50d1729a8ca2机器人.jpg.jpg', 'sssss', 0, NULL, NULL);
-INSERT INTO `cms_products` VALUES (2, 'test', 1, '/Users/jin/Downloads/static/uploads/products/e952ce39-45aa-4228-bda5-473f956558b3.jpg', 'sssss', 0, NULL, NULL);
+INSERT INTO `cms_products` VALUES (1, 'test', 1, 'products/3a86f18e-46ae-476d-ae01-50d1729a8ca2机器人.jpg.jpg', 'sssss', 0, '信息', '信息');
+INSERT INTO `cms_products` VALUES (2, 'test', 1, 'products/e952ce39-45aa-4228-bda5-473f956558b3.jpg', 'sssss', 0, '哈哈', '哈哈');
+INSERT INTO `cms_products` VALUES (3, 'sss', 2, 'products/638e6cb8-1c05-4a41-af45-f48ebb4eeb2f.jpg', '试试', 0, '是是是', '试试');
+INSERT INTO `cms_products` VALUES (5, '🐎', 3, 'products/037ee9a6-f3fb-4e86-9df9-a946da1ac521.jpg', '33', 0, '😄', '11');
+INSERT INTO `cms_products` VALUES (6, 'sasdad', 2, 'products/037ee9a6-f3fb-4e86-9df9-a946da1ac521.jpg', '333', 0, '谁说', '谁说');
+INSERT INTO `cms_products` VALUES (7, 'sss', 2, 'products/037ee9a6-f3fb-4e86-9df9-a946da1ac521.jpg', 'sss', 0, '谁说的', 'ss');
+INSERT INTO `cms_products` VALUES (8, 'cccc', 2, 'products/037ee9a6-f3fb-4e86-9df9-a946da1ac521.jpg', 'sss', 0, '密密麻麻', 'ss');
 COMMIT;
 
 SET FOREIGN_KEY_CHECKS = 1;
