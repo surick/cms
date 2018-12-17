@@ -248,35 +248,19 @@
                         </ul>
                     </div>
                 </div>
+                <script type="text/javascript" src="/js/search.js"></script>
                 <div id="header1">
                     <div class="spacesearch" id="soso">
                         <div id="box_413546135">
                             <div xmlns="" class="columnSpace" id="elem-FrontProducts_generalSearch01-13759478123710" name="商品搜索">
-                                <script type="text/javascript" src="/js/products/FrontProducts_generalSearch01.js"></script>
-                                <script type="text/javascript" src="/js/i18n/FrontProducts_generalSearch01.js"></script>
                                 <div id="FrontProducts_generalSearch01-13759478123710" class="FrontProducts_generalSearch01-d1_c1">
-                                    <form id="FrontProducts_generalSearch01-13759478123710_searchForm" name="FrontProducts_generalSearch01-13759478123710_searchForm" method="post" target="_self" onsubmit="return FrontProducts_generalSearch01.validateForm('FrontProducts_generalSearch01-13759478123710','true','Please enter the key');"
-                                        action="/FrontProducts.do?method=submit">
-                                        <input type="hidden" id="FrontProducts_generalSearch01-13759478123710_searchType" name="searchType" value="1" />
-                                        <input type="hidden" id="FrontProducts_generalSearch01-13759478123710_propertyType" value="2" />
-                                        <input type="hidden" id="FrontProducts_generalSearch01-13759478123710_areaType" value="" />
-                                        <input type="hidden" name="action_page" value="/products_search_result.html" />
+                                    <form id="searchForm" target="_self"
+                                          action="https://www.google.com" onsubmit="return dispatch()">
                                         <span class="keyword">
-		                                <span>
-			                            </span>
-                                        <input id="FrontProducts_generalSearch01-13759478123710_keyword" name="keyword" class="input input-gray" type="text" value="" onfocus="FrontProducts_generalSearch01.keyover('FrontProducts_generalSearch01-13759478123710','Please enter the key')" onblur="FrontProducts_generalSearch01.keyout('FrontProducts_generalSearch01-13759478123710','Please enter the key')"
-                                            maxlength="50" />
+                                        <input id="q" name="keyword" class="input input-gray" type="text" value=""
+                                               maxlength="50" />
                                         </span>
-                                        <input id="FrontProducts_generalSearch01-13759478123710_propertyId" type="hidden" value="" />
-                                        <span class="search1">
-	                                    <input type="submit" class="btn btn-com-03" value=""/>
-		                                </span>
                                     </form>
-                                    <script type="text/javascript">
-                                        //<![CDATA[
-                                        FrontProducts_generalSearch01.keyout('FrontProducts_generalSearch01-13759478123710', 'Please enter the key');
-                                        //]]>
-                                    </script>
                                 </div>
                             </div>
                         </div>

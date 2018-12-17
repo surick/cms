@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
     <title>Timing chain|valve tappet|oil pump|timing kit|water pump 【昆山智泉機械有限公司】</title>
@@ -264,35 +264,19 @@
                         </ul>
                     </div>
                 </div>
+                <script type="text/javascript" src="/js/search.js"></script>
                 <div id="header1">
                     <div class="spacesearch" id="soso">
                         <div id="box_413546135">
                             <div xmlns="" class="columnSpace" id="elem-FrontProducts_generalSearch01-13759478123710" name="商品搜索">
-                                <script type="text/javascript" src="/js/products/FrontProducts_generalSearch01.js"></script>
-                                <script type="text/javascript" src="/js/i18n/FrontProducts_generalSearch01.js"></script>
                                 <div id="FrontProducts_generalSearch01-13759478123710" class="FrontProducts_generalSearch01-d1_c1">
-                                    <form id="FrontProducts_generalSearch01-13759478123710_searchForm" name="FrontProducts_generalSearch01-13759478123710_searchForm" method="post" target="_self" onsubmit="return FrontProducts_generalSearch01.validateForm('FrontProducts_generalSearch01-13759478123710','true','Please enter the key');"
-                                        action="/FrontProducts.do?method=submit">
-                                        <input type="hidden" id="FrontProducts_generalSearch01-13759478123710_searchType" name="searchType" value="1" />
-                                        <input type="hidden" id="FrontProducts_generalSearch01-13759478123710_propertyType" value="2" />
-                                        <input type="hidden" id="FrontProducts_generalSearch01-13759478123710_areaType" value="" />
-                                        <input type="hidden" name="action_page" value="/products_search_result.html" />
+                                    <form id="searchForm" target="_self"
+                                          action="https://www.google.com" onsubmit="return dispatch()">
                                         <span class="keyword">
-		                                <span>
-			                            </span>
-                                        <input id="FrontProducts_generalSearch01-13759478123710_keyword" name="keyword" class="input input-gray" type="text" value="" onfocus="FrontProducts_generalSearch01.keyover('FrontProducts_generalSearch01-13759478123710','Please enter the key')" onblur="FrontProducts_generalSearch01.keyout('FrontProducts_generalSearch01-13759478123710','Please enter the key')"
-                                            maxlength="50" />
+                                        <input id="q" name="keyword" class="input input-gray" type="text" value=""
+                                               maxlength="50" />
                                         </span>
-                                        <input id="FrontProducts_generalSearch01-13759478123710_propertyId" type="hidden" value="" />
-                                        <span class="search1">
-	                                    <input type="submit" class="btn btn-com-03" value=""/>
-		                                </span>
                                     </form>
-                                    <script type="text/javascript">
-                                        //<![CDATA[
-                                        FrontProducts_generalSearch01.keyout('FrontProducts_generalSearch01-13759478123710', 'Please enter the key');
-                                        //]]>
-                                    </script>
                                 </div>
                             </div>
                         </div>
@@ -446,26 +430,27 @@
                                                         </div>
                                                         <div class="content">
                                                             <div class="describe htmledit">
-                                                                <div class="FrontComContent_detail01-00f100144_htmlbreak" id="FrontComContent_detail01-00f100144_cont_1" style="display: block;">
+                                                                <div class="FrontComContent_detail01-00f100144_htmlbreak" id="FrontComContent_detail01-00f100144_cont_1" style="display: block;"
+                                                                th:utext="${contact.content}">
                                                                     <!--TODO:data-->
-                                                                    <p>
-                                                                        <span style="color: #0000cd;"><strong>昆山智泉機械有限公司</strong></span></p>
-                                                                    <p>
-                                                                        Tel:+86-512-65830037</p>
-                                                                    <p>
-                                                                        Fax:+86-512-65529992</p>
-                                                                    <p>
-                                                                        E-mail:<a href="mailto:tai@tran-auto.com">tai@tran-auto.com</a></p>
-                                                                    <p>
-                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="mailto:tai803@tran-auto.com">tai803@tran-auto.com</a></p>
-                                                                    <p>
-                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="mailto:tai804@tran-auto.com">tai804@tran-auto.com</a></p>
-                                                                    <p>
-                                                                        P.C:215011</p>
-                                                                    <p>
-                                                                        Add:716 Gold River Center,No.88 Shishan Rd., Suzhou, P.R.China</p>
-                                                                    <p>
-                                                                        <strong>Export Company: <span style="color: #0000cd;">SUZHOU HENGXIANG IMPORT &amp; EXPORT CO., LTD.</span></strong></p>
+                                                                    <!--<p>-->
+                                                                        <!--<span style="color: #0000cd;"><strong>昆山智泉機械有限公司</strong></span></p>-->
+                                                                    <!--<p>-->
+                                                                        <!--Tel:+86-512-65830037</p>-->
+                                                                    <!--<p>-->
+                                                                        <!--Fax:+86-512-65529992</p>-->
+                                                                    <!--<p>-->
+                                                                        <!--E-mail:<a href="mailto:tai@tran-auto.com">tai@tran-auto.com</a></p>-->
+                                                                    <!--<p>-->
+                                                                        <!--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="mailto:tai803@tran-auto.com">tai803@tran-auto.com</a></p>-->
+                                                                    <!--<p>-->
+                                                                        <!--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="mailto:tai804@tran-auto.com">tai804@tran-auto.com</a></p>-->
+                                                                    <!--<p>-->
+                                                                        <!--P.C:215011</p>-->
+                                                                    <!--<p>-->
+                                                                        <!--Add:716 Gold River Center,No.88 Shishan Rd., Suzhou, P.R.China</p>-->
+                                                                    <!--<p>-->
+                                                                        <!--<strong>Export Company: <span style="color: #0000cd;">SUZHOU HENGXIANG IMPORT &amp; EXPORT CO., LTD.</span></strong></p>-->
                                                                 </div>
                                                             </div>
                                                         </div>
