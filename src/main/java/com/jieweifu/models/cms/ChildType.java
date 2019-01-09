@@ -22,6 +22,12 @@ public class ChildType {
     @Column(columnName = "cn_child_name")
     private String cnChildName;
 
+    @Column(columnName = "parent_name")
+    private String parentName;
+
+    @Column(columnName = "cn_parent_name")
+    private String cnParentName;
+
     private Integer deleted;
 
     private String name;
@@ -84,6 +90,22 @@ public class ChildType {
         this.value = value;
     }
 
+    public String getParentName() {
+        return parentName;
+    }
+
+    public void setParentName(String parentName) {
+        this.parentName = parentName;
+    }
+
+    public String getCnParentName() {
+        return cnParentName;
+    }
+
+    public void setCnParentName(String cnParentName) {
+        this.cnParentName = cnParentName;
+    }
+
     @Override
     public String toString() {
         return "ChildType{" +
@@ -91,7 +113,11 @@ public class ChildType {
                 ", parentId=" + parentId +
                 ", childName='" + childName + '\'' +
                 ", cnChildName='" + cnChildName + '\'' +
+                ", parentName='" + parentName + '\'' +
+                ", cnParentName='" + cnParentName + '\'' +
                 ", deleted=" + deleted +
+                ", name='" + name + '\'' +
+                ", value=" + value +
                 '}';
     }
 }

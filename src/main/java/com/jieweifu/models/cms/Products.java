@@ -19,6 +19,12 @@ public class Products {
     @Column(columnName = "child_type_id")
     private Integer childTypeId;
 
+    @Column(columnName = "child_name")
+    private String childName;
+
+    @Column(columnName = "cn_child_name")
+    private String cnChildName;
+
     @Column(columnName = "img_url")
     private String imgUrl;
 
@@ -96,12 +102,30 @@ public class Products {
         this.cnContent = cnContent;
     }
 
+    public String getChildName() {
+        return childName;
+    }
+
+    public void setChildName(String childName) {
+        this.childName = childName;
+    }
+
+    public String getCnChildName() {
+        return cnChildName;
+    }
+
+    public void setCnChildName(String cnChildName) {
+        this.cnChildName = cnChildName;
+    }
+
     @Override
     public String toString() {
         return "Products{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", childTypeId=" + childTypeId +
+                ", childName='" + childName + '\'' +
+                ", cnChildName='" + cnChildName + '\'' +
                 ", imgUrl='" + imgUrl + '\'' +
                 ", content='" + content + '\'' +
                 ", deleted=" + deleted +

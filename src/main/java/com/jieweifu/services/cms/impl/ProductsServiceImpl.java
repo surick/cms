@@ -66,8 +66,8 @@ public class ProductsServiceImpl implements ProductsService {
     @Override
     public List<Products> getAllProducts() {
         return db.select()
-                .from(Products.class)
-                .where("deleted = 0")
+                .from("cms_products AS a", "cms_child_type as b")
+                .where("a.child_type_id = b.id AND a.deleted = 0")
                 .queryForList(Products.class);
     }
 
@@ -85,8 +85,8 @@ public class ProductsServiceImpl implements ProductsService {
         int pageSize = pageable.getPageSize();
         int currentPage = pageable.getPageNumber();
         List<Products> list = db.select()
-                .from(Products.class)
-                .where("deleted = 0")
+                .from("cms_products AS a", "cms_child_type as b")
+                .where("a.child_type_id = b.id AND a.deleted = 0")
                 .limit(currentPage, pageSize)
                 .queryForList(Products.class);
 

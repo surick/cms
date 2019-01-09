@@ -23,11 +23,11 @@
 		<![endif]-->
 		<script type="text/javascript">
             function saveFeedback() {
-                console.log($("#Form").serializeArray());
+                console.log($('#Form').serialize());
                 $.ajax({
                     url: '/cms/feedback/saveFeedback',
                     type: 'POST',
-                    data: $("#Form").serializeArray(),
+                    data: $('#Form').serialize(),
                     success: function(res){
                         if (res.success) {
                             window.location.href = '/feedback';
@@ -311,9 +311,10 @@
 															<iframe name="myframe" style="display:none"></iframe>
 														<a name="messageLink" class="messageLink">&nbsp;</a>
 														<div class="FrontMessages_customizeEmit01-d1_c1">
-															<form id="FrontMessages_customizeEmit01-004_referForm" action="/cms/feedback/saveFeedback" method="post" name="FrontMessages_customizeEmit01-004_referForm">
+															<form id="Form" action="/cms/feedback/saveFeedback" method="post" name="FrontMessages_customizeEmit01-004_referForm">
 																<table width="100%" border="0" cellspacing="0" cellpadding="0">
 																	<tr class="title">
+																		<br/>
 																		<th>Title:</th>
 																		<td><input type="hidden" id="isDisplayMessagesTitle" value="0" />
 																			<div class="text-oper">

@@ -36,11 +36,11 @@
 	<![endif]-->
 	<script type="text/javascript">
 		function saveFeedback() {
-            console.log($("#Form").serializeArray());
+            console.log($('#Form').serialize());
             $.ajax({
                 url: '/cms/feedback/saveFeedback',
                 type: 'POST',
-                data: $("#Form").serializeArray(),
+                data: $('#Form').serialize(),
                 success: function(res){
                     if (res.success) {
                         window.location.href = '/cn/feedback';
@@ -253,7 +253,7 @@
 
 					el.style.left = (document.documentElement.scrollLeft + elleft)+"px";
 
-				}
+				};
 
 			else el.style.position = "fixed";
 
@@ -374,9 +374,10 @@
 														<div class="FrontMessages_customizeEmit01-d1_c1">
 															<form id="Form" action="/cms/feedback/saveFeedback" method="post" name="FrontMessages_customizeEmit01-004_referForm">
 																<table width="100%" border="0" cellspacing="0" cellpadding="0">
+																	<br/>
 																	<tr class="title">
 																		<th>标题:</th>
-																		<td><input type="hidden" id="isDisplayMessagesTitle" value="0" />
+																		<td>
 																			<div class="text-oper">
 																				<span class="fontnone">&nbsp;</span>
 																				<input class="input input-gray" type="text" id="messagesTitle" name="title"
@@ -475,7 +476,7 @@
 																			<div class="text-oper">
 																				<span class="fontnone">&nbsp;</span>
 																				<input class="input input-gray" type="text" id="address" name="address"
-																					   value="" maxlength="200"/>
+																					    maxlength="200"/>
 																			</div>
 																			<!--<div class="text-tip">-->
                        															<!--<span class="tip-default"  id="FrontMessages_customizeEmit01-004_infoaddress"></span>-->

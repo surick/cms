@@ -100,8 +100,8 @@ public class ProductTypeServiceImpl implements ProductTypeService {
     @Override
     public List<ChildType> getAllChildTypes() {
         return db.select()
-                .from(ChildType.class)
-                .where("deleted = 0")
+                .from("cms_child_type AS a", "cms_parent_type AS b")
+                .where("a.parent_id = b.id AND a.deleted = 0")
                 .queryForList(ChildType.class);
     }
 
